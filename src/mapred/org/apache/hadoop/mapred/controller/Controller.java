@@ -12,8 +12,8 @@ public class Controller {
 
     // Attributes
     private static Controller instance = new Controller();
-    public static final int DEFAULT_TARGET = 2;
-    public static final int DEFAULT_VIRTUAL_TARGET = 1;
+    public static final int DEFAULT_TARGET = 3;
+    public static final int DEFAULT_VIRTUAL_TARGET = 2;
     private int target;
     private int virtualTarget;
     private long current_minspacestart;

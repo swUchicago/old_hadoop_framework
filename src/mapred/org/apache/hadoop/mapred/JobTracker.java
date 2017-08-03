@@ -1343,7 +1343,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
   // Implement the RPC
   public synchronized int getCurrentMaxException() throws IOException {
     Sensor sensor = Sensor.getInstance();
-    return sensor.getMaxExceptions();
+    return sensor.getCurrentMaxExceptions();
   }
 
   public synchronized long getIntermediateFileSize() throws IOException {

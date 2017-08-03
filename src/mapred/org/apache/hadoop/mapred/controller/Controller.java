@@ -35,11 +35,13 @@ public class Controller {
         target = DEFAULT_TARGET;
         virtualTarget = DEFAULT_VIRTUAL_TARGET;
         current_minspacestart = 0;
+        constant = loadFile(CONSTANT_FILE_PATH);
+        kalmanFilter = new KalmanFilter(constant.P, constant.Q, constant.a, constant.H, alpha);
     }
 
     public void loadKalmanFilter() {
         constant = loadFile(CONSTANT_FILE_PATH);
-        kalmanFilter = new KalmanFilter(constant.P, constant.Q, constant.a, constant.H);
+        kalmanFilter.updateConstant(constant.P, constant.Q, constant.a, constant.H);
     }
 
     private Kalman_Filter_Constant loadFile(String path) {

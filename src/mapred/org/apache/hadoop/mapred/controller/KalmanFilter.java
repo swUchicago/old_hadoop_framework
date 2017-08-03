@@ -1,4 +1,5 @@
 package org.apache.hadoop.mapred.controller;
+
 /*This is for kalman filter implementation*/
 
 
@@ -12,7 +13,7 @@ double H=1;
 double a=1;
 
 
-KalmanFilter kf = new KalmanFilter(P,Q,a,H);
+KalmanFilter kf = new KalmanFilter(P,Q,a,H,alpha_default);  //changes here
 double new_alpha=kf.predict(alpha);
 */
 
@@ -26,17 +27,25 @@ public class KalmanFilter{
     double x_pre;
     public static double p_pre;
     double x_fill;
-    double p_fill;
+    public static double p_fill;   //Changes here
     double k;
 
-    public KalmanFilter(double P,double Q, double a, double H){
+    public KalmanFilter(double P,double Q, double a, double H, double x_fill){ //changes here
         this.P=P;
         this.Q=Q;
         this.a=a;
         this.H=H;
         this.p_fill=P;
-        this.x_fill=0;
+        this.x_fill=x_fill; //changes here
     }
+
+    public void updateConstant(double P, double Q, double a, double H) {
+        this.P=P;
+        this.Q=Q;
+        this.a=a;
+        this.H=H;
+    }
+
 
     public double predict(double x_now){
         x_pre = a*x_fill;
@@ -47,5 +56,3 @@ public class KalmanFilter{
         return x_pre;
     }
 }
-
-

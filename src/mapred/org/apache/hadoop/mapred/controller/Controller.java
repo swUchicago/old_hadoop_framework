@@ -82,7 +82,7 @@ public class Controller {
         System.out.println("Controller:Before change alpha = " + alpha);
         System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
         System.out.println("ChangeAlpha : " + oldMaxExceptions + " " + currentMaxExceptions + " " + old_minspacestart + " " + current_minspacestart);
-        double newAlpha = changeAlpha(oldMaxExceptions, currentMaxExceptions, old_minspacestart, currentMaxExceptions);
+        double newAlpha = changeAlpha(oldMaxExceptions, currentMaxExceptions, old_minspacestart, current_minspacestart);
         if (newAlpha > 0) {
             alpha = newAlpha;
         }

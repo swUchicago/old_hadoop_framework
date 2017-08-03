@@ -81,13 +81,13 @@ public class Controller {
         }
         System.out.println("Controller:Constant = " + constant.P + " " + constant.Q + " " + constant.a + " " + constant.H);
         System.out.println("Controller:Before change alpha = " + alpha);
-        System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha);
+        System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
         double newAlpha = changeAlpha(oldMaxExceptions, currentMaxExceptions, current_minspacestart, (long) result);
         if (newAlpha != -1) {
             alpha = newAlpha;
         }
         System.out.println("Controller:After change alpha = " + alpha);
-        System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha);
+        System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
         current_minspacestart = (long) result;
     }
 

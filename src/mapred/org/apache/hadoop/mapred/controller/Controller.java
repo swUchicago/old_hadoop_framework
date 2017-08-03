@@ -87,7 +87,7 @@ public class Controller {
             alpha = newAlpha;
         }
         System.out.println("Controller:After change alpha = " + alpha);
-        System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
+        System.out.println("Controller:AFter change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
         result = current_minspacestart + (1 - p) / alpha * (virtualTarget - currentMaxExceptions);
         if (result < 0) {
             result = 0;
@@ -105,10 +105,11 @@ public class Controller {
                 alpha = -1;
             } else {
                 double temp = (double)(current_exception - old_exception)/(double)(current_minspacestart-old_minspacestart);
-                System.out.println("TEMP : " + temp);
+                System.out.println("Before checking -- TEMP : " + temp);
                 if (temp >= 0) {
                     temp = 0;
                 }
+                System.out.println("After checking -- TEMP : " + temp);
                 alpha = kalmanFilter.predict(temp);
                 System.out.println("Kalman filter output : " + alpha);
             }

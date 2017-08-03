@@ -34,6 +34,9 @@ public class Controller {
         target = DEFAULT_TARGET;
         virtualTarget = DEFAULT_VIRTUAL_TARGET;
         current_minspacestart = 0;
+    }
+
+    public void loadKalmanFilter() {
         constant = loadFile(CONSTANT_FILE_PATH);
         kalmanFilter = new KalmanFilter(constant.P, constant.Q, constant.a, constant.H);
     }
@@ -76,10 +79,12 @@ public class Controller {
         if (result < 0) {
             result = 0;
         }
+        System.out.println("Controller:Before change alpha = " + alpha);
         double newAlpha = changeAlpha(oldMaxExceptions, currentMaxExceptions, current_minspacestart, (long) result);
         if (newAlpha != -1) {
             alpha = newAlpha;
         }
+        System.out.println("Controller:After change alpha = " + alpha);
         current_minspacestart = (long) result;
     }
 

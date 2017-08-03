@@ -1331,6 +1331,7 @@ class JobInProgress {
 
     Controller controller = Controller.getInstance();
     sensor.countMaxException();
+    controller.loadKalmanFilter();
     controller.changeMinspacestart(sensor.getCurrentMaxExceptions(), sensor.getOldMaxException());
 //    controller.changeMinspacestart(sensor.getMaxExceptions(), JobTracker.mapParallelism, sensor.getIntermediateFileSize());
 

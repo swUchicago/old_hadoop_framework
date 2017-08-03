@@ -106,7 +106,7 @@ public class Controller {
             } else {
                 double temp = (double)(current_exception - old_exception)/(double)(current_minspacestart-old_minspacestart);
                 System.out.println("TEMP : " + temp);
-                if (temp < 0) {
+                if (temp >= 0) {
                     temp = 0;
                 }
                 alpha = kalmanFilter.predict(temp);

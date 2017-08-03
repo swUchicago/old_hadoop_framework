@@ -98,7 +98,7 @@ public class Controller {
                 alpha = -1;
             } else {
                 double temp = (double)(current_exception - old_exception)/(double)(current_minspacestart-old_minspacestart);
-                if (temp <= 0) {
+                if (temp > 0) {
                     temp = 0;
                 }
                 alpha = kalmanFilter.predict(temp);

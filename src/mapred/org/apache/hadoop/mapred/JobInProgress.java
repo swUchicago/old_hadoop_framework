@@ -1330,7 +1330,8 @@ class JobInProgress {
     sensor.setBytesWritten(bytesWritten);
 
     Controller controller = Controller.getInstance();
-    controller.changeMinspacestart(sensor.getMaxExceptions());
+    sensor.countMaxException();
+    controller.changeMinspacestart(sensor.getCurrentMaxExceptions(), sensor.getOldMaxException());
 //    controller.changeMinspacestart(sensor.getMaxExceptions(), JobTracker.mapParallelism, sensor.getIntermediateFileSize());
 
     LOG.info("Task '" + taskid + "' has completed " + tip.getTIPId() + 

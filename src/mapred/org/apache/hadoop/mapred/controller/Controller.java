@@ -13,7 +13,7 @@ public class Controller {
     // Attributes
     private static Controller instance = new Controller();
     public static final int DEFAULT_TARGET = 3;
-    public static final int DEFAULT_VIRTUAL_TARGET = 2;
+    public static final int DEFAULT_VIRTUAL_TARGET = 1;
     private int target;
     private int virtualTarget;
     private long current_minspacestart;
@@ -102,11 +102,12 @@ public class Controller {
             } else {
                 double temp = (double)(current_exception - old_exception)/(double)(current_minspacestart-old_minspacestart);
                 System.out.println("TEMP : " + temp);
-                if (temp > 0) {
-                    temp = 0;
+                if (temp < 0) {
+                    alpha = kalmanFilter.predict(temp);
+                    System.out.println("Kalman filter output : " + alpha);
+                } else {
+                    alpha = -1;
                 }
-                alpha = kalmanFilter.predict(temp);
-                System.out.println("Kalman filter output : " + alpha);
             }
         }
         return alpha;

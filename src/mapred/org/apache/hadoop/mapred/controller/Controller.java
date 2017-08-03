@@ -17,6 +17,7 @@ public class Controller {
     private int target;
     private int virtualTarget;
     private long current_minspacestart;
+    private long old_minspacestart;
     private static final String CONSTANT_FILE_PATH = "/home/ubuntu/old_hadoop_framework/constant.txt";
     private double alpha = (double) -1 / (double) 157286400;
 
@@ -75,20 +76,21 @@ public class Controller {
         } else {
             p = p2;
         }
-        result = current_minspacestart + (1 - p) / alpha * (virtualTarget - currentMaxExceptions);
-        if (result < 0) {
-            result = 0;
-        }
         System.out.println("Controller:Constant = " + constant.P + " " + constant.Q + " " + constant.a + " " + constant.H);
         System.out.println("Controller:Before change alpha = " + alpha);
         System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
         System.out.println("ChangeAlpha : " + oldMaxExceptions + " " + currentMaxExceptions + " " + current_minspacestart + " " + result);
-        double newAlpha = changeAlpha(oldMaxExceptions, currentMaxExceptions, current_minspacestart, (long) result);
+        double newAlpha = changeAlpha(oldMaxExceptions, currentMaxExceptions, current_minspacestart, old_minspacestart);
         if (newAlpha > 0) {
             alpha = newAlpha;
         }
         System.out.println("Controller:After change alpha = " + alpha);
         System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
+        result = current_minspacestart + (1 - p) / alpha * (virtualTarget - currentMaxExceptions);
+        if (result < 0) {
+            result = 0;
+        }
+        old_minspacestart = current_minspacestart;
         current_minspacestart = (long) result;
     }
 

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jetty-ext">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev/lib/jetty-ext/jasper-compiler.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev/lib/jetty-ext/jasper-runtime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev/lib/jetty-ext/commons-el.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev/lib/jetty-ext/jsp-api.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hadoop-0.18.0-streaming">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/contrib/streaming/hadoop-0.18.0-streaming.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -8,10 +8,16 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="lucene-core-2.3.1" level="project" />
+    <orderEntry type="library" name="build" level="project" />
+    <orderEntry type="library" name="hadoop-0.18.1-dev-index" level="project" />
+    <orderEntry type="library" name="old_hadoop_framework" level="project" />
+    <orderEntry type="library" name="hadoop-0.18.1-dev-index1" level="project" />
+    <orderEntry type="library" name="lib2" level="project" />
     <orderEntry type="library" name="hadoop-0.18.0-index" level="project" />
-    <orderEntry type="library" name="old_hadoop" level="project" />
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="module" module-name="old_hadoop" />
+    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="library" name="lucene-core-2.3.11" level="project" />
+    <orderEntry type="library" name="hadoop-0.18.1-dev" level="project" />
+    <orderEntry type="library" name="lucene-core-2.3.1" level="project" />
+    <orderEntry type="module" module-name="old_hadoop_framework" />
   </component>
 </module>

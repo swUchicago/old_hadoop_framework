@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hadoop-0.18.1-dev-streaming">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev/contrib/streaming/hadoop-0.18.1-dev-streaming.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

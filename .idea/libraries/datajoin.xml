@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="datajoin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/contrib/datajoin/hadoop-0.18.1-dev-datajoin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/contrib/datajoin/hadoop-0.18.1-dev-datajoin-examples.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

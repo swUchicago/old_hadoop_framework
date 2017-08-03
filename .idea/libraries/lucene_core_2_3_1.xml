@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="lucene-core-2.3.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev/src/contrib/index/lib/lucene-core-2.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

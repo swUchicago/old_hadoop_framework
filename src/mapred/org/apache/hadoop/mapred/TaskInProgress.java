@@ -499,8 +499,8 @@ class TaskInProgress {
       System.out.println("TaskInProgress: bytes written = " + bytesWritten);
       sensor.setMapOutputSize(outputBytes);
       sensor.setBytesWritten(bytesWritten);
-
-      controller.changeMinspacestart(sensor.getMaxExceptions());
+      sensor.countMaxException();
+      controller.changeMinspacestart(sensor.getCurrentMaxExceptions(), sensor.getOldMaxException());
 //      controller.changeMinspacestart(sensor.getMaxExceptions(), JobTracker.mapParallelism, sensor.getIntermediateFileSize());
 
       numTaskFailures++;

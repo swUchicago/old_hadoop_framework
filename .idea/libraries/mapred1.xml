@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="mapred1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/test/org/apache/hadoop/mapred/test.zip!/" />
+      <root url="jar://$PROJECT_DIR$/src/test/org/apache/hadoop/mapred/test.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

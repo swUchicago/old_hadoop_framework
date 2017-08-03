@@ -14,6 +14,5 @@
     <orderEntry type="library" name="lib1" level="project" />
     <orderEntry type="library" name="hadoop-0.18.1-dev" level="project" />
     <orderEntry type="module" module-name="old_hadoop_framework" />
-    <orderEntry type="module" module-name="hadoop-0.18.1-dev" />
   </component>
 </module>

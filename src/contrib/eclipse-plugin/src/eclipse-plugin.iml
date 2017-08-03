@@ -7,7 +7,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="old_hadoop" level="project" />
-    <orderEntry type="module" module-name="old_hadoop" />
+    <orderEntry type="library" name="build" level="project" />
+    <orderEntry type="library" name="old_hadoop_framework" level="project" />
+    <orderEntry type="library" name="hadoop-0.18.1-dev" level="project" />
+    <orderEntry type="module" module-name="old_hadoop_framework" />
   </component>
 </module>

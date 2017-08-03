@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hadoop-0.18.0-eclipse-plugin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/contrib/eclipse-plugin/hadoop-0.18.0-eclipse-plugin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -24,6 +24,8 @@ public class Sensor {
     private static ArrayList<Pair> exceptions;
     private static long mapOutputSize;
     private static long bytesWritten;
+    private int oldMaxException = 0;
+    private int currentMaxException = 0;
 
     // Constructor
     private Sensor() {
@@ -79,14 +81,23 @@ public class Sensor {
         return result;
     }
 
-    public synchronized int getMaxExceptions() {
+    public synchronized void countMaxException() {
         int result = 0;
         for (int i=0; i < exceptions.size(); i++) {
             if (exceptions.get(i).value > result) {
                 result = exceptions.get(i).value;
             }
         }
-        return result;
+        oldMaxException = currentMaxException;
+        currentMaxException = result;
+    }
+
+    public synchronized int getCurrentMaxExceptions() {
+        return currentMaxException;
+    }
+
+    public synchronized int getOldMaxException() {
+        return oldMaxException;
     }
 
     public synchronized long getIntermediateFileSize() {

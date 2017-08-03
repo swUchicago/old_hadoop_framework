@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hadoop-0.18.1-dev-index">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/contrib/index/hadoop-0.18.1-dev-index.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="hadoop-0.18.1-dev">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev/hadoop-0.18.1-dev-test.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev/hadoop-0.18.1-dev-examples.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev/hadoop-0.18.1-dev-tools.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev/hadoop-0.18.1-dev-core.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

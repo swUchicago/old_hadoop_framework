@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="build">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev-test.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/ant-hadoop-0.18.1-dev.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev-examples.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/build/hadoop-0.18.1-dev-tools.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

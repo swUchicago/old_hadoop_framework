@@ -79,7 +79,7 @@ public class Controller {
         System.out.println("Controller:Constant = " + constant.P + " " + constant.Q + " " + constant.a + " " + constant.H);
         System.out.println("Controller:Before change alpha = " + alpha);
         System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
-        System.out.println("ChangeAlpha : " + oldMaxExceptions + " " + currentMaxExceptions + " " + current_minspacestart + " " + result);
+        System.out.println("ChangeAlpha : " + oldMaxExceptions + " " + currentMaxExceptions + " " + current_minspacestart + " " + old_minspacestart);
         double newAlpha = changeAlpha(oldMaxExceptions, currentMaxExceptions, current_minspacestart, old_minspacestart);
         if (newAlpha > 0) {
             alpha = newAlpha;

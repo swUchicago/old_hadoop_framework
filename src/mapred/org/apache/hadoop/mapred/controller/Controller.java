@@ -79,6 +79,7 @@ public class Controller {
         if (result < 0) {
             result = 0;
         }
+        System.out.println("Controller:Constant = " + constant.P + " " + constant.Q + " " + constant.a + " " + constant.H);
         System.out.println("Controller:Before change alpha = " + alpha);
         double newAlpha = changeAlpha(oldMaxExceptions, currentMaxExceptions, current_minspacestart, (long) result);
         if (newAlpha != -1) {

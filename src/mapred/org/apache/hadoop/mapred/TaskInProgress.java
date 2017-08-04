@@ -494,9 +494,7 @@ class TaskInProgress {
       Counters counters = getTaskStatus(taskid).getCounters();
 
       long outputBytes = getTaskStatus(taskid).getCounters().getGroup("org.apache.hadoop.mapred.Task$Counter").getCounterForName("MAP_OUTPUT_BYTES").getCounter();
-      System.out.println("TaskInProgress: map output = " + outputBytes);
       long bytesWritten = getTaskStatus(taskid).getCounters().getGroup("org.apache.hadoop.mapred.Task$FileSystemCounter").getCounterForName("LOCAL_WRITE").getCounter();
-      System.out.println("TaskInProgress: bytes written = " + bytesWritten);
       sensor.setMapOutputSize(outputBytes);
       sensor.setBytesWritten(bytesWritten);
       sensor.countMaxException();

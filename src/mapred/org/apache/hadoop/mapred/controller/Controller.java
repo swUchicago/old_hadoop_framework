@@ -78,16 +78,16 @@ public class Controller {
         } else {
             p = p2;
         }
-        System.out.println("Controller:Constant = " + constant.P + " " + constant.Q + " " + constant.a + " " + constant.H);
-        System.out.println("Controller:Before change alpha = " + alpha);
-        System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
-        System.out.println("ChangeAlpha : " + oldMaxExceptions + " " + currentMaxExceptions + " " + old_minspacestart + " " + current_minspacestart);
-        double newAlpha = changeAlpha(oldMaxExceptions, currentMaxExceptions, old_minspacestart, current_minspacestart);
-        if (newAlpha > 0) {
-            alpha = newAlpha;
-        }
-        System.out.println("Controller:After change alpha = " + alpha);
-        System.out.println("Controller:AFter change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
+//        System.out.println("Controller:Constant = " + constant.P + " " + constant.Q + " " + constant.a + " " + constant.H);
+//        System.out.println("Controller:Before change alpha = " + alpha);
+//        System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
+//        System.out.println("ChangeAlpha : " + oldMaxExceptions + " " + currentMaxExceptions + " " + old_minspacestart + " " + current_minspacestart);
+//        double newAlpha = changeAlpha(oldMaxExceptions, currentMaxExceptions, old_minspacestart, current_minspacestart);
+//        if (newAlpha > 0) {
+//            alpha = newAlpha;
+//        }
+//        System.out.println("Controller:After change alpha = " + alpha);
+//        System.out.println("Controller:AFter change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
         result = current_minspacestart + (1 - p) / alpha * (virtualTarget - currentMaxExceptions);
         if (result < 0) {
             result = 0;

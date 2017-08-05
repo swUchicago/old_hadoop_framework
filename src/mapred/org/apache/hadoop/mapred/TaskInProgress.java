@@ -501,7 +501,7 @@ class TaskInProgress {
       controller.loadKalmanFilter();
       controller.changeMinspacestart(sensor.getCurrentMaxExceptions(), sensor.getOldMaxException());
 //      controller.changeMinspacestart(sensor.getMaxExceptions(), JobTracker.mapParallelism, sensor.getIntermediateFileSize());
-      System.out.println("Task failed, " + sensor.getCurrentMaxExceptions());
+      System.out.println(sensor.getCurrentMaxExceptions());
       numTaskFailures++;
       machinesWhereFailed.add(trackerHostName);
     } else {

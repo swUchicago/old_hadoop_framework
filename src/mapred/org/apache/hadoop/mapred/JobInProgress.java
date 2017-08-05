@@ -1334,7 +1334,7 @@ class JobInProgress {
     controller.loadKalmanFilter();
     controller.changeMinspacestart(sensor.getCurrentMaxExceptions(), sensor.getOldMaxException());
 //    controller.changeMinspacestart(sensor.getMaxExceptions(), JobTracker.mapParallelism, sensor.getIntermediateFileSize());
-    System.out.println("Task finished, " + sensor.getCurrentMaxExceptions());
+    System.out.println(sensor.getCurrentMaxExceptions());
     LOG.info("Task '" + taskid + "' has completed " + tip.getTIPId() + 
              " successfully.");          
 

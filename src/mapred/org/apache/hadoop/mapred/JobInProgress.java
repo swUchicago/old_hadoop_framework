@@ -1323,9 +1323,7 @@ class JobInProgress {
     Sensor sensor = Sensor.getInstance();
     sensor.deleteExceptions(taskid.getTaskID());
     long outputBytes = tip.getTaskStatus(taskid).getCounters().getGroup("org.apache.hadoop.mapred.Task$Counter").getCounterForName("MAP_OUTPUT_BYTES").getCounter();
-    System.out.println("JobInProgress: map output = " + outputBytes);
     long bytesWritten = tip.getTaskStatus(taskid).getCounters().getGroup("org.apache.hadoop.mapred.Task$FileSystemCounter").getCounterForName("LOCAL_WRITE").getCounter();
-    System.out.println("JobInProgress: bytes written = " + bytesWritten);
     sensor.setMapOutputSize(outputBytes);
     sensor.setBytesWritten(bytesWritten);
 

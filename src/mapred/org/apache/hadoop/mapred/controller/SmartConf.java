@@ -77,7 +77,6 @@ public class SmartConf {
      * measure: performance measurement implemented by developer
      */
     public void updatePerf(int currentPerf){
-        //performance measurement implemented by developer
         this.currentPerf = currentPerf;
     }
 
@@ -101,7 +100,7 @@ public class SmartConf {
         System.out.println("Pole : " + pole);
         lambda = countLambda(meanPerf, stdevPerf);
         System.out.println("Lambda : " + lambda);
-        virtualgoal = (int)((1 - lambda) * goal);
+        virtualgoal = Math.round((1 - lambda) * goal);
         System.out.println("Virtual goal : " + virtualgoal);
     }
 
@@ -145,7 +144,6 @@ public class SmartConf {
             this.virtualgoal = goal_*lambda;
         }
     }
-
 
     /**
      * Allow user to set the alpha dynamic if needed

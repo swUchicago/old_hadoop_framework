@@ -54,6 +54,7 @@ import org.apache.hadoop.ipc.RemoteException;
 import org.apache.hadoop.ipc.Server;
 import org.apache.hadoop.ipc.RPC.VersionMismatch;
 import org.apache.hadoop.mapred.controller.Sensor;
+import org.apache.hadoop.mapred.controller.SmartConf;
 import org.apache.hadoop.metrics.MetricsContext;
 import org.apache.hadoop.metrics.MetricsRecord;
 import org.apache.hadoop.metrics.MetricsUtil;
@@ -95,6 +96,13 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
   public static int mapParallelism = 1;
   public static boolean isJobSubmitted = false;
   public static long jobStartTime = 0;
+
+
+  private static SmartConf smartConf;
+
+  public static SmartConf getSmartConf() {
+    return smartConf;
+  }
 
   // system directories are world-wide readable and owner readable
   final static FsPermission SYSTEM_DIR_PERMISSION =
@@ -632,6 +640,20 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
    * Start the JobTracker process, listen on the indicated port
    */
   JobTracker(JobConf conf) throws IOException, InterruptedException {
+
+    // Initialize a SmartConf instance
+    long defaultConf = 0;
+    long goal = 3;
+    boolean overshootable = false;
+    boolean directControllable = true;
+    smartConf = new SmartConf(defaultConf, goal, overshootable, directControllable);
+    // Setup and do profilling
+    double[] performances = {0.8870967742, 2.032258065, 1.117647059, 1.582278481, 1.381578947, 0.5740740741, 1.615384615, 0.5090909091, 0.9436619718};
+    double[] configurations = {188743680, 0, 73400320, 20971520, 125829120, 251658240, 52428800, 314572800, 157286400};
+    double[] meanPerf = {0.8870967742, 2.032258065, 1.117647059, 1.582278481, 1.381578947, 0.5740740741, 1.615384615, 0.5090909091, 0.9436619718};
+    double[] stdevPerf = {0.770455235, 1.127247638, 0.7828270956, 0.9282958599, 0.9793481541, 0.4991257206, 1.107597954, 0.634581439, 0.7537965611};
+    smartConf.profile(performances, configurations, meanPerf, stdevPerf);
+
     //
     // Grab some static constants
     //
@@ -1346,14 +1368,8 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
     return sensor.getCurrentMaxExceptions();
   }
 
-  public synchronized long getIntermediateFileSize() throws IOException {
-    Sensor sensor = Sensor.getInstance();
-    return sensor.getIntermediateFileSize();
-  }
-
   public synchronized long getMinspacestart() throws IOException {
-    Controller controller = Controller.getInstance();
-    return controller.getCurrentMinspacestart();
+    return smartConf.getConf();
   }
 
   public synchronized long getJobStartTime() throws IOException {

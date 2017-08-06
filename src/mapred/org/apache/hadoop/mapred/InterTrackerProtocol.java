@@ -83,11 +83,6 @@ interface InterTrackerProtocol extends VersionedProtocol {
   public int getCurrentMaxException() throws IOException;
 
   /**
-   * Get the intermediate file size
-   */
-  public long getIntermediateFileSize() throws IOException;
-
-  /**
    * Get the minspacestart calculated by the master
    */
   public long getMinspacestart() throws IOException;

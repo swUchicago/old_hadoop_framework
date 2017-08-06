@@ -31,6 +31,7 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.Vector;
 
+import jdk.nashorn.internal.scripts.JO;
 import org.apache.hadoop.mapred.controller.Controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -40,6 +41,7 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.mapred.JobHistory.Values;
 import org.apache.hadoop.mapred.JobTracker.JobTrackerMetrics;
 import org.apache.hadoop.mapred.controller.Sensor;
+import org.apache.hadoop.mapred.controller.SmartConf;
 import org.apache.hadoop.metrics.MetricsContext;
 import org.apache.hadoop.metrics.MetricsRecord;
 import org.apache.hadoop.metrics.MetricsUtil;
@@ -1319,19 +1321,15 @@ class JobInProgress {
       return false;
     }
 
-    // Sensor catches exception and intermediate file size after a task is finished
+    // Sensor catches exception
     Sensor sensor = Sensor.getInstance();
     sensor.deleteExceptions(taskid.getTaskID());
-    long outputBytes = tip.getTaskStatus(taskid).getCounters().getGroup("org.apache.hadoop.mapred.Task$Counter").getCounterForName("MAP_OUTPUT_BYTES").getCounter();
-    long bytesWritten = tip.getTaskStatus(taskid).getCounters().getGroup("org.apache.hadoop.mapred.Task$FileSystemCounter").getCounterForName("LOCAL_WRITE").getCounter();
-    sensor.setMapOutputSize(outputBytes);
-    sensor.setBytesWritten(bytesWritten);
-
-    Controller controller = Controller.getInstance();
     sensor.countMaxException();
-    controller.loadKalmanFilter();
-    controller.changeMinspacestart(sensor.getCurrentMaxExceptions(), sensor.getOldMaxException());
-//    controller.changeMinspacestart(sensor.getMaxExceptions(), JobTracker.mapParallelism, sensor.getIntermediateFileSize());
+
+    SmartConf smartConf = JobTracker.getSmartConf();
+    smartConf.updatePerf(sensor.getCurrentMaxExceptions());
+    smartConf.updateConf();
+
     System.out.println(sensor.getCurrentMaxExceptions());
     LOG.info("Task '" + taskid + "' has completed " + tip.getTIPId() + 
              " successfully.");          

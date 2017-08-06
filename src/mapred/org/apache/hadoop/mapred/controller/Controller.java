@@ -72,7 +72,7 @@ public class Controller {
     public synchronized void changeMinspacestart(int currentMaxExceptions, int oldMaxExceptions) {
         double result, a, p, p1, p2;
         p1 = 0.9;
-        p2 = 0;
+        p2 = 0.1;
         if (currentMaxExceptions <= virtualTarget) {
             p = p1;
         } else {

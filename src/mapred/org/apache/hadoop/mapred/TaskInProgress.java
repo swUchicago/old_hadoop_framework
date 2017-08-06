@@ -33,6 +33,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.mapred.JobClient.RawSplit;
 import org.apache.hadoop.mapred.controller.Sensor;
+import org.apache.hadoop.mapred.controller.SmartConf;
 import org.apache.hadoop.net.Node;
 import org.apache.hadoop.mapred.JobTracker;
 
@@ -485,7 +486,7 @@ class TaskInProgress {
 
     // Initiating Sensor
     Sensor sensor = Sensor.getInstance();
-    Controller controller = Controller.getInstance();
+    SmartConf smartConf = JobTracker.getSmartConf();
 
     if (taskState == TaskStatus.State.FAILED) {
 
@@ -493,14 +494,10 @@ class TaskInProgress {
       sensor.catchExceptions(taskid.getTaskID());
       Counters counters = getTaskStatus(taskid).getCounters();
 
-      long outputBytes = getTaskStatus(taskid).getCounters().getGroup("org.apache.hadoop.mapred.Task$Counter").getCounterForName("MAP_OUTPUT_BYTES").getCounter();
-      long bytesWritten = getTaskStatus(taskid).getCounters().getGroup("org.apache.hadoop.mapred.Task$FileSystemCounter").getCounterForName("LOCAL_WRITE").getCounter();
-      sensor.setMapOutputSize(outputBytes);
-      sensor.setBytesWritten(bytesWritten);
       sensor.countMaxException();
-      controller.loadKalmanFilter();
-      controller.changeMinspacestart(sensor.getCurrentMaxExceptions(), sensor.getOldMaxException());
-//      controller.changeMinspacestart(sensor.getMaxExceptions(), JobTracker.mapParallelism, sensor.getIntermediateFileSize());
+      smartConf.updatePerf(sensor.getCurrentMaxExceptions());
+      smartConf.updateConf();
+
       System.out.println(sensor.getCurrentMaxExceptions());
       numTaskFailures++;
       machinesWhereFailed.add(trackerHostName);

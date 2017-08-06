@@ -98,7 +98,9 @@ public class SmartConf {
         delta = countDelta(meanPerf, stdevPerf);
         pole = 1 - 2 / delta;
         System.out.println("Delta : " + delta);
+        System.out.println("Pole : " + pole);
         lambda = countLambda(meanPerf, stdevPerf);
+        System.out.println("Lambda : " + lambda);
         virtualgoal = (int)((1 - lambda) * goal);
         System.out.println("Virtual goal : " + virtualgoal);
     }
@@ -114,7 +116,7 @@ public class SmartConf {
         for(int i=0; i<mean.length; i++) {
             delta = delta + (std[i]/mean[i]);
         }
-        delta = 1 + 3 / (double) mean.length * delta;
+        delta = 1 + ((3 / (double) mean.length) * delta);
         return delta;
     }
 
@@ -129,7 +131,7 @@ public class SmartConf {
         for(int i=0; i<mean.length; i++) {
             lambda = lambda + (std[i]/mean[i]);
         }
-        lambda = 1 / (double) mean.length * lambda;
+        lambda = (1 / (double) mean.length) * lambda;
         return lambda;
     }
 

@@ -52,7 +52,12 @@ public class SmartConf {
         } else {
             nextConf = transducer((long)tmp);
         }
-        conf = nextConf;
+        // There is a minimum configuration for my case
+        if (nextConf < 0) {
+            conf = 0;
+        } else {
+            conf = nextConf;
+        }
     }
 
     /**

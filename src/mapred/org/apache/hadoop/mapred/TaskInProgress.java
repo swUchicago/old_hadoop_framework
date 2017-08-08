@@ -499,7 +499,6 @@ class TaskInProgress {
 
       System.out.println(sensor.getCurrentMaxExceptions());
       numTaskFailures++;
-      numTaskFailures++;
       machinesWhereFailed.add(trackerHostName);
     } else {
       numKilledTasks++;

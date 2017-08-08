@@ -1040,8 +1040,8 @@ public class TaskTracker
                        reduceTotal < maxCurrentReduceTasks) &&
                       acceptNewTasks;
       int currentMaxException = jobClient.getCurrentMaxException();
-      localMinSpaceStart = jobClient.getMinspacestart();
-//      localMinSpaceStart = minSpaceStart;
+//      localMinSpaceStart = jobClient.getMinspacestart();
+      localMinSpaceStart = minSpaceStart;
       if (jobClient.getIsJobSubmitted()) {
         System.out.println(jobClient.getJobStartTime() + "\t" + System.currentTimeMillis() + "\t" + currentMaxException + "\t" + localMinSpaceStart);
       }

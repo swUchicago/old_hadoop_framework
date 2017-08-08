@@ -22,16 +22,11 @@ public class Sensor {
     // Attributes
     private static Sensor instance = new Sensor();
     private static ArrayList<Pair> exceptions;
-    private static long mapOutputSize;
-    private static long bytesWritten;
-    private int oldMaxException = 0;
     private int currentMaxException = 0;
 
     // Constructor
     private Sensor() {
         exceptions = new ArrayList<Pair>();
-        mapOutputSize = 0;
-        bytesWritten = 0;
     }
 
     public static Sensor getInstance() {
@@ -61,25 +56,6 @@ public class Sensor {
         }
     }
 
-    public synchronized void setMapOutputSize(long mapOutputSize) {
-        if (this.mapOutputSize < mapOutputSize) {
-            this.mapOutputSize = mapOutputSize;
-        }
-    }
-
-    public synchronized void setBytesWritten(long bytesWritten) {
-        if (this.bytesWritten < bytesWritten) {
-            this.bytesWritten = bytesWritten;
-        }
-    }
-
-    public synchronized String stringifyExceptions() {
-        String result = "";
-        for(int i=0; i<exceptions.size(); i++) {
-            result = result + exceptions.get(i).key.toString() + "[" + exceptions.get(i).value + "], ";
-        }
-        return result;
-    }
 
     public synchronized void countMaxException() {
         int result = 0;
@@ -88,7 +64,6 @@ public class Sensor {
                 result = exceptions.get(i).value;
             }
         }
-        oldMaxException = currentMaxException;
         currentMaxException = result;
     }
 
@@ -96,18 +71,5 @@ public class Sensor {
         return currentMaxException;
     }
 
-    public synchronized int getOldMaxException() {
-        return oldMaxException;
-    }
-
-    public synchronized long getIntermediateFileSize() {
-        long result;
-        if (mapOutputSize > bytesWritten) {
-            result = mapOutputSize;
-        } else {
-            result = bytesWritten;
-        }
-        return result;
-    }
 
 }

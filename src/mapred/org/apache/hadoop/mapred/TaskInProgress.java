@@ -492,13 +492,13 @@ class TaskInProgress {
 
       // Sensor catches exceptions and intermediate file size
       sensor.catchExceptions(taskid.getTaskID());
-      Counters counters = getTaskStatus(taskid).getCounters();
 
       sensor.countMaxException();
       smartConf.updatePerf(sensor.getCurrentMaxExceptions());
       smartConf.updateConf();
 
       System.out.println(sensor.getCurrentMaxExceptions());
+      numTaskFailures++;
       numTaskFailures++;
       machinesWhereFailed.add(trackerHostName);
     } else {

@@ -41,9 +41,11 @@
       <file leaf-file-name="TaskTracker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="1061" column="6" lean-forward="true" selection-start-line="1061" selection-start-column="6" selection-end-line="1061" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="228">
+              <caret line="1043" column="0" lean-forward="false" selection-start-line="1043" selection-start-column="0" selection-end-line="1043" selection-end-column="0" />
+              <folding>
+                <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -672,12 +674,12 @@
       <workItem from="1501861402460" duration="1596000" />
       <workItem from="1501908117328" duration="433000" />
       <workItem from="1501917531030" duration="13118000" />
-      <workItem from="1502186781043" duration="936000" />
+      <workItem from="1502186781043" duration="1116000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28367000" />
+    <option name="totallyTimeSpent" value="28547000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="829" extended-state="6" />
@@ -757,7 +759,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15975">
           <caret line="1065" column="6" lean-forward="true" selection-start-line="1065" selection-start-column="6" selection-end-line="1065" selection-end-column="6" />
-          <folding />
+          <folding>
+            <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -834,7 +838,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15645">
           <caret line="1043" column="0" lean-forward="false" selection-start-line="1043" selection-start-column="0" selection-end-line="1043" selection-end-column="41" />
-          <folding />
+          <folding>
+            <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -933,7 +939,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15735">
           <caret line="1049" column="24" lean-forward="true" selection-start-line="1049" selection-start-column="24" selection-end-line="1049" selection-end-column="24" />
-          <folding />
+          <folding>
+            <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -996,7 +1004,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16005">
           <caret line="1067" column="56" lean-forward="false" selection-start-line="1067" selection-start-column="56" selection-end-line="1067" selection-end-column="56" />
-          <folding />
+          <folding>
+            <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1136,9 +1146,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="1061" column="6" lean-forward="true" selection-start-line="1061" selection-start-column="6" selection-end-line="1061" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="228">
+          <caret line="1043" column="0" lean-forward="false" selection-start-line="1043" selection-start-column="0" selection-end-line="1043" selection-end-column="0" />
+          <folding>
+            <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

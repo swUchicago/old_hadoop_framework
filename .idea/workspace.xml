@@ -16,12 +16,9 @@
       <file leaf-file-name="Sensor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Sensor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <element signature="e#606#607#0" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -29,7 +26,7 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="682">
               <caret line="74" column="16" lean-forward="false" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -38,13 +35,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskTracker.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TaskTracker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="920" column="27" lean-forward="false" selection-start-line="920" selection-start-column="27" selection-end-line="920" selection-end-column="27" />
+            <state relative-caret-position="198">
+              <caret line="1041" column="41" lean-forward="true" selection-start-line="1041" selection-start-column="41" selection-end-line="1041" selection-end-column="41" />
               <folding>
-                <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
+                <marker date="1502296940000" expanded="true" signature="37975:38031" ph="..." />
               </folding>
             </state>
           </provider>
@@ -53,8 +50,8 @@
       <file leaf-file-name="SmartConf.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/SmartConf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -63,9 +60,44 @@
       <file leaf-file-name="JobTracker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobTracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-              <folding />
+            <state relative-caret-position="228">
+              <caret line="643" column="29" lean-forward="false" selection-start-line="643" selection-start-column="20" selection-end-line="643" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3827#3833#0" expanded="true" />
+                <element signature="e#6932#6953#0" expanded="true" />
+                <element signature="e#13656#13671#0" expanded="true" />
+                <element signature="e#20169#20191#0" expanded="true" />
+                <element signature="e#20247#20262#0" expanded="true" />
+                <element signature="e#20379#20413#0" expanded="true" />
+                <element signature="e#20567#20598#0" expanded="true" />
+                <element signature="e#20697#20720#0" expanded="true" />
+                <element signature="e#20858#20886#0" expanded="true" />
+                <element signature="e#21043#21071#0" expanded="true" />
+                <element signature="e#21206#21233#0" expanded="true" />
+                <element signature="e#21711#21738#0" expanded="true" />
+                <element signature="e#21795#21812#0" expanded="true" />
+                <element signature="e#21866#21881#0" expanded="true" />
+                <element signature="e#23044#23063#0" expanded="true" />
+                <element signature="e#43309#43324#0" expanded="true" />
+                <element signature="e#43923#43938#0" expanded="true" />
+                <element signature="e#44298#44313#0" expanded="true" />
+                <element signature="e#44947#44955#0" expanded="true" />
+                <element signature="e#50060#50079#0" expanded="true" />
+                <element signature="e#56336#56355#0" expanded="true" />
+                <element signature="e#56924#56943#0" expanded="true" />
+                <element signature="e#57119#57127#0" expanded="true" />
+                <element signature="e#63998#64017#0" expanded="true" />
+                <element signature="e#64062#64069#0" expanded="true" />
+                <element signature="e#70391#70403#0" expanded="true" />
+                <element signature="e#71403#71415#0" expanded="true" />
+                <element signature="e#75987#75998#0" expanded="true" />
+                <element signature="e#76540#76551#0" expanded="true" />
+                <element signature="e#80535#80550#0" expanded="true" />
+                <element signature="e#82923#82957#0" expanded="true" />
+                <element signature="e#83622#83656#0" expanded="true" />
+                <element signature="e#85852#85860#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,18 +105,18 @@
       <file leaf-file-name="InterTrackerProtocol.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/InterTrackerProtocol.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="739">
-              <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="1125">
+              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskInProgress.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TaskInProgress.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="499" column="59" lean-forward="false" selection-start-line="499" selection-start-column="59" selection-end-line="499" selection-end-column="59" />
+            <state relative-caret-position="228">
+              <caret line="499" column="17" lean-forward="false" selection-start-line="499" selection-start-column="6" selection-end-line="499" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -94,8 +126,10 @@
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobInProgress.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="41" column="52" lean-forward="false" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="52" />
-              <folding />
+              <caret line="1330" column="15" lean-forward="false" selection-start-line="1330" selection-start-column="4" selection-end-line="1330" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,8 +137,8 @@
       <file leaf-file-name="LinearRegression.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/LinearRegression.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+            <state relative-caret-position="540">
+              <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -135,10 +169,12 @@
       <find>JobTracker(</find>
       <find>Cont</find>
       <find>Controller</find>
-      <find>minspacestart</find>
       <find>Job</find>
-      <find>SmartConf</find>
       <find>Job failed</find>
+      <find>Sensor</find>
+      <find>system.out.</find>
+      <find>SmartConf</find>
+      <find>minspacestart</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -161,8 +197,8 @@
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobInProgress.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/SmartConf.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Sensor.java" />
-        <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java" />
+        <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java" />
       </list>
     </option>
   </component>
@@ -175,7 +211,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="829" />
+    <option name="height" value="830" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -192,8 +228,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -248,7 +285,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -674,15 +710,19 @@
       <workItem from="1501861402460" duration="1596000" />
       <workItem from="1501908117328" duration="433000" />
       <workItem from="1501917531030" duration="13118000" />
-      <workItem from="1502186781043" duration="1812000" />
+      <workItem from="1502186781043" duration="2188000" />
+      <workItem from="1502207282331" duration="1737000" />
+      <workItem from="1502242530465" duration="72000" />
+      <workItem from="1502252291694" duration="398000" />
+      <workItem from="1502296796633" duration="195000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29243000" />
+    <option name="totallyTimeSpent" value="32021000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="829" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="830" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -701,7 +741,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13055556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -713,6 +752,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -726,6 +766,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobInProgress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="41" column="52" lean-forward="false" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/LinearRegression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6165">
+          <caret line="478" column="46" lean-forward="true" selection-start-line="478" selection-start-column="46" selection-end-line="478" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/KalmanFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -738,10 +804,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -760,7 +823,7 @@
         <state relative-caret-position="15975">
           <caret line="1065" column="6" lean-forward="true" selection-start-line="1065" selection-start-column="6" selection-end-line="1065" selection-end-column="6" />
           <folding>
-            <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
+            <marker date="1502296940000" expanded="true" signature="37975:38031" ph="..." />
           </folding>
         </state>
       </provider>
@@ -769,7 +832,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9795">
           <caret line="653" column="58" lean-forward="false" selection-start-line="653" selection-start-column="58" selection-end-line="653" selection-end-column="58" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3827#3833#0" expanded="true" />
+            <element signature="e#6932#6953#0" expanded="true" />
+            <element signature="e#13656#13671#0" expanded="true" />
+            <element signature="e#20169#20191#0" expanded="true" />
+            <element signature="e#20247#20262#0" expanded="true" />
+            <element signature="e#20379#20413#0" expanded="true" />
+            <element signature="e#20567#20598#0" expanded="true" />
+            <element signature="e#20697#20720#0" expanded="true" />
+            <element signature="e#20858#20886#0" expanded="true" />
+            <element signature="e#21043#21071#0" expanded="true" />
+            <element signature="e#21206#21233#0" expanded="true" />
+            <element signature="e#21711#21738#0" expanded="true" />
+            <element signature="e#21795#21812#0" expanded="true" />
+            <element signature="e#21866#21881#0" expanded="true" />
+            <element signature="e#23044#23063#0" expanded="true" />
+            <element signature="e#43309#43324#0" expanded="true" />
+            <element signature="e#43923#43938#0" expanded="true" />
+            <element signature="e#44298#44313#0" expanded="true" />
+            <element signature="e#44947#44955#0" expanded="true" />
+            <element signature="e#50060#50079#0" expanded="true" />
+            <element signature="e#56336#56355#0" expanded="true" />
+            <element signature="e#56924#56943#0" expanded="true" />
+            <element signature="e#57119#57127#0" expanded="true" />
+            <element signature="e#63998#64017#0" expanded="true" />
+            <element signature="e#64062#64069#0" expanded="true" />
+            <element signature="e#70391#70403#0" expanded="true" />
+            <element signature="e#71403#71415#0" expanded="true" />
+            <element signature="e#75987#75998#0" expanded="true" />
+            <element signature="e#76540#76551#0" expanded="true" />
+            <element signature="e#80535#80550#0" expanded="true" />
+            <element signature="e#82923#82957#0" expanded="true" />
+            <element signature="e#83622#83656#0" expanded="true" />
+            <element signature="e#85852#85860#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -793,7 +891,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="52" column="34" lean-forward="true" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -825,10 +925,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -837,7 +934,7 @@
         <state relative-caret-position="15645">
           <caret line="1043" column="0" lean-forward="false" selection-start-line="1043" selection-start-column="0" selection-end-line="1043" selection-end-column="41" />
           <folding>
-            <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
+            <marker date="1502296940000" expanded="true" signature="37975:38031" ph="..." />
           </folding>
         </state>
       </provider>
@@ -846,7 +943,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36810">
           <caret line="2454" column="24" lean-forward="false" selection-start-line="2454" selection-start-column="6" selection-end-line="2454" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3827#3833#0" expanded="true" />
+            <element signature="e#6932#6953#0" expanded="true" />
+            <element signature="e#13656#13671#0" expanded="true" />
+            <element signature="e#20169#20191#0" expanded="true" />
+            <element signature="e#20247#20262#0" expanded="true" />
+            <element signature="e#20379#20413#0" expanded="true" />
+            <element signature="e#20567#20598#0" expanded="true" />
+            <element signature="e#20697#20720#0" expanded="true" />
+            <element signature="e#20858#20886#0" expanded="true" />
+            <element signature="e#21043#21071#0" expanded="true" />
+            <element signature="e#21206#21233#0" expanded="true" />
+            <element signature="e#21711#21738#0" expanded="true" />
+            <element signature="e#21795#21812#0" expanded="true" />
+            <element signature="e#21866#21881#0" expanded="true" />
+            <element signature="e#23044#23063#0" expanded="true" />
+            <element signature="e#43309#43324#0" expanded="true" />
+            <element signature="e#43923#43938#0" expanded="true" />
+            <element signature="e#44298#44313#0" expanded="true" />
+            <element signature="e#44947#44955#0" expanded="true" />
+            <element signature="e#50060#50079#0" expanded="true" />
+            <element signature="e#56336#56355#0" expanded="true" />
+            <element signature="e#56924#56943#0" expanded="true" />
+            <element signature="e#57119#57127#0" expanded="true" />
+            <element signature="e#63998#64017#0" expanded="true" />
+            <element signature="e#64062#64069#0" expanded="true" />
+            <element signature="e#70391#70403#0" expanded="true" />
+            <element signature="e#71403#71415#0" expanded="true" />
+            <element signature="e#75987#75998#0" expanded="true" />
+            <element signature="e#76540#76551#0" expanded="true" />
+            <element signature="e#80535#80550#0" expanded="true" />
+            <element signature="e#82923#82957#0" expanded="true" />
+            <element signature="e#83622#83656#0" expanded="true" />
+            <element signature="e#85852#85860#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -862,7 +994,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20040">
           <caret line="1336" column="37" lean-forward="false" selection-start-line="1336" selection-start-column="37" selection-end-line="1336" selection-end-column="37" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -888,10 +1022,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -909,7 +1040,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36810">
           <caret line="2454" column="24" lean-forward="false" selection-start-line="2454" selection-start-column="6" selection-end-line="2454" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3827#3833#0" expanded="true" />
+            <element signature="e#6932#6953#0" expanded="true" />
+            <element signature="e#13656#13671#0" expanded="true" />
+            <element signature="e#20169#20191#0" expanded="true" />
+            <element signature="e#20247#20262#0" expanded="true" />
+            <element signature="e#20379#20413#0" expanded="true" />
+            <element signature="e#20567#20598#0" expanded="true" />
+            <element signature="e#20697#20720#0" expanded="true" />
+            <element signature="e#20858#20886#0" expanded="true" />
+            <element signature="e#21043#21071#0" expanded="true" />
+            <element signature="e#21206#21233#0" expanded="true" />
+            <element signature="e#21711#21738#0" expanded="true" />
+            <element signature="e#21795#21812#0" expanded="true" />
+            <element signature="e#21866#21881#0" expanded="true" />
+            <element signature="e#23044#23063#0" expanded="true" />
+            <element signature="e#43309#43324#0" expanded="true" />
+            <element signature="e#43923#43938#0" expanded="true" />
+            <element signature="e#44298#44313#0" expanded="true" />
+            <element signature="e#44947#44955#0" expanded="true" />
+            <element signature="e#50060#50079#0" expanded="true" />
+            <element signature="e#56336#56355#0" expanded="true" />
+            <element signature="e#56924#56943#0" expanded="true" />
+            <element signature="e#57119#57127#0" expanded="true" />
+            <element signature="e#63998#64017#0" expanded="true" />
+            <element signature="e#64062#64069#0" expanded="true" />
+            <element signature="e#70391#70403#0" expanded="true" />
+            <element signature="e#71403#71415#0" expanded="true" />
+            <element signature="e#75987#75998#0" expanded="true" />
+            <element signature="e#76540#76551#0" expanded="true" />
+            <element signature="e#80535#80550#0" expanded="true" />
+            <element signature="e#82923#82957#0" expanded="true" />
+            <element signature="e#83622#83656#0" expanded="true" />
+            <element signature="e#85852#85860#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -925,7 +1091,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20040">
           <caret line="1336" column="37" lean-forward="false" selection-start-line="1336" selection-start-column="37" selection-end-line="1336" selection-end-column="37" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -934,7 +1102,7 @@
         <state relative-caret-position="15735">
           <caret line="1049" column="24" lean-forward="true" selection-start-line="1049" selection-start-column="24" selection-end-line="1049" selection-end-column="24" />
           <folding>
-            <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
+            <marker date="1502296940000" expanded="true" signature="37975:38031" ph="..." />
           </folding>
         </state>
       </provider>
@@ -951,10 +1119,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -972,7 +1137,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20565">
           <caret line="1371" column="14" lean-forward="false" selection-start-line="1371" selection-start-column="14" selection-end-line="1371" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3827#3833#0" expanded="true" />
+            <element signature="e#6932#6953#0" expanded="true" />
+            <element signature="e#13656#13671#0" expanded="true" />
+            <element signature="e#20169#20191#0" expanded="true" />
+            <element signature="e#20247#20262#0" expanded="true" />
+            <element signature="e#20379#20413#0" expanded="true" />
+            <element signature="e#20567#20598#0" expanded="true" />
+            <element signature="e#20697#20720#0" expanded="true" />
+            <element signature="e#20858#20886#0" expanded="true" />
+            <element signature="e#21043#21071#0" expanded="true" />
+            <element signature="e#21206#21233#0" expanded="true" />
+            <element signature="e#21711#21738#0" expanded="true" />
+            <element signature="e#21795#21812#0" expanded="true" />
+            <element signature="e#21866#21881#0" expanded="true" />
+            <element signature="e#23044#23063#0" expanded="true" />
+            <element signature="e#43309#43324#0" expanded="true" />
+            <element signature="e#43923#43938#0" expanded="true" />
+            <element signature="e#44298#44313#0" expanded="true" />
+            <element signature="e#44947#44955#0" expanded="true" />
+            <element signature="e#50060#50079#0" expanded="true" />
+            <element signature="e#56336#56355#0" expanded="true" />
+            <element signature="e#56924#56943#0" expanded="true" />
+            <element signature="e#57119#57127#0" expanded="true" />
+            <element signature="e#63998#64017#0" expanded="true" />
+            <element signature="e#64062#64069#0" expanded="true" />
+            <element signature="e#70391#70403#0" expanded="true" />
+            <element signature="e#71403#71415#0" expanded="true" />
+            <element signature="e#75987#75998#0" expanded="true" />
+            <element signature="e#76540#76551#0" expanded="true" />
+            <element signature="e#80535#80550#0" expanded="true" />
+            <element signature="e#82923#82957#0" expanded="true" />
+            <element signature="e#83622#83656#0" expanded="true" />
+            <element signature="e#85852#85860#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -988,7 +1188,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19995">
           <caret line="1333" column="34" lean-forward="false" selection-start-line="1333" selection-start-column="34" selection-end-line="1333" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -997,7 +1199,7 @@
         <state relative-caret-position="16005">
           <caret line="1067" column="56" lean-forward="false" selection-start-line="1067" selection-start-column="56" selection-end-line="1067" selection-end-column="56" />
           <folding>
-            <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
+            <marker date="1502296940000" expanded="true" signature="37975:38031" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1014,10 +1216,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="40" column="61" lean-forward="true" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
-          <folding>
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1035,7 +1234,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20565">
           <caret line="1371" column="14" lean-forward="false" selection-start-line="1371" selection-start-column="14" selection-end-line="1371" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3827#3833#0" expanded="true" />
+            <element signature="e#6932#6953#0" expanded="true" />
+            <element signature="e#13656#13671#0" expanded="true" />
+            <element signature="e#20169#20191#0" expanded="true" />
+            <element signature="e#20247#20262#0" expanded="true" />
+            <element signature="e#20379#20413#0" expanded="true" />
+            <element signature="e#20567#20598#0" expanded="true" />
+            <element signature="e#20697#20720#0" expanded="true" />
+            <element signature="e#20858#20886#0" expanded="true" />
+            <element signature="e#21043#21071#0" expanded="true" />
+            <element signature="e#21206#21233#0" expanded="true" />
+            <element signature="e#21711#21738#0" expanded="true" />
+            <element signature="e#21795#21812#0" expanded="true" />
+            <element signature="e#21866#21881#0" expanded="true" />
+            <element signature="e#23044#23063#0" expanded="true" />
+            <element signature="e#43309#43324#0" expanded="true" />
+            <element signature="e#43923#43938#0" expanded="true" />
+            <element signature="e#44298#44313#0" expanded="true" />
+            <element signature="e#44947#44955#0" expanded="true" />
+            <element signature="e#50060#50079#0" expanded="true" />
+            <element signature="e#56336#56355#0" expanded="true" />
+            <element signature="e#56924#56943#0" expanded="true" />
+            <element signature="e#57119#57127#0" expanded="true" />
+            <element signature="e#63998#64017#0" expanded="true" />
+            <element signature="e#64062#64069#0" expanded="true" />
+            <element signature="e#70391#70403#0" expanded="true" />
+            <element signature="e#71403#71415#0" expanded="true" />
+            <element signature="e#75987#75998#0" expanded="true" />
+            <element signature="e#76540#76551#0" expanded="true" />
+            <element signature="e#80535#80550#0" expanded="true" />
+            <element signature="e#82923#82957#0" expanded="true" />
+            <element signature="e#83622#83656#0" expanded="true" />
+            <element signature="e#85852#85860#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1051,7 +1285,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19995">
           <caret line="1333" column="34" lean-forward="false" selection-start-line="1333" selection-start-column="34" selection-end-line="1333" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,74 +1299,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/LinearRegression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/SmartConf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Sensor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="74" column="16" lean-forward="false" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/InterTrackerProtocol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state relative-caret-position="1125">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobInProgress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="41" column="52" lean-forward="false" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="920" column="27" lean-forward="false" selection-start-line="920" selection-start-column="27" selection-end-line="920" selection-end-column="27" />
-          <folding>
-            <marker date="1502192822000" expanded="true" signature="37973:38029" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1138,15 +1311,111 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="287" column="28" lean-forward="true" selection-start-line="287" selection-start-column="28" selection-end-line="287" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/LinearRegression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/SmartConf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="499" column="59" lean-forward="false" selection-start-line="499" selection-start-column="59" selection-end-line="499" selection-end-column="59" />
+        <state relative-caret-position="228">
+          <caret line="499" column="17" lean-forward="false" selection-start-line="499" selection-start-column="6" selection-end-line="499" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobInProgress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="1330" column="15" lean-forward="false" selection-start-line="1330" selection-start-column="4" selection-end-line="1330" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Sensor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="74" column="16" lean-forward="false" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="643" column="29" lean-forward="false" selection-start-line="643" selection-start-column="20" selection-end-line="643" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3827#3833#0" expanded="true" />
+            <element signature="e#6932#6953#0" expanded="true" />
+            <element signature="e#13656#13671#0" expanded="true" />
+            <element signature="e#20169#20191#0" expanded="true" />
+            <element signature="e#20247#20262#0" expanded="true" />
+            <element signature="e#20379#20413#0" expanded="true" />
+            <element signature="e#20567#20598#0" expanded="true" />
+            <element signature="e#20697#20720#0" expanded="true" />
+            <element signature="e#20858#20886#0" expanded="true" />
+            <element signature="e#21043#21071#0" expanded="true" />
+            <element signature="e#21206#21233#0" expanded="true" />
+            <element signature="e#21711#21738#0" expanded="true" />
+            <element signature="e#21795#21812#0" expanded="true" />
+            <element signature="e#21866#21881#0" expanded="true" />
+            <element signature="e#23044#23063#0" expanded="true" />
+            <element signature="e#43309#43324#0" expanded="true" />
+            <element signature="e#43923#43938#0" expanded="true" />
+            <element signature="e#44298#44313#0" expanded="true" />
+            <element signature="e#44947#44955#0" expanded="true" />
+            <element signature="e#50060#50079#0" expanded="true" />
+            <element signature="e#56336#56355#0" expanded="true" />
+            <element signature="e#56924#56943#0" expanded="true" />
+            <element signature="e#57119#57127#0" expanded="true" />
+            <element signature="e#63998#64017#0" expanded="true" />
+            <element signature="e#64062#64069#0" expanded="true" />
+            <element signature="e#70391#70403#0" expanded="true" />
+            <element signature="e#71403#71415#0" expanded="true" />
+            <element signature="e#75987#75998#0" expanded="true" />
+            <element signature="e#76540#76551#0" expanded="true" />
+            <element signature="e#80535#80550#0" expanded="true" />
+            <element signature="e#82923#82957#0" expanded="true" />
+            <element signature="e#83622#83656#0" expanded="true" />
+            <element signature="e#85852#85860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="1041" column="41" lean-forward="true" selection-start-line="1041" selection-start-column="41" selection-end-line="1041" selection-end-column="41" />
+          <folding>
+            <marker date="1502296940000" expanded="true" signature="37975:38031" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

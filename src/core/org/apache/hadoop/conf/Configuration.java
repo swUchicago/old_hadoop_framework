@@ -332,7 +332,7 @@ public class Configuration implements Iterable<Map.Entry<String,String>> {
    * @return property value as an <code>int</code>, 
    *         or <code>defaultValue</code>. 
    */
-  i {
+  public int getInt(String name, int defaultValue) {
     String valueString = get(name);
     if (valueString == null)
       return defaultValue;

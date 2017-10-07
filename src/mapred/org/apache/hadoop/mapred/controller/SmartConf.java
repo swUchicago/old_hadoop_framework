@@ -1,5 +1,10 @@
 package org.apache.hadoop.mapred.controller;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 /**
  * Created by williamsentosa on 8/5/17.
  */
@@ -158,4 +163,103 @@ public class SmartConf {
         this.alpha = alpha_;
     }
 
+
+    // Adding Kalman Filter
+
+    private class Kalman_Filter_Constant {
+        public double P;
+        public double Q;
+        public double a;
+        public double H;
+    }
+
+
+    private Kalman_Filter_Constant constant;
+    private KalmanFilter kalmanFilter;
+    private static final String CONSTANT_FILE_PATH = "/home/ubuntu/old_hadoop_framework/constant.txt";
+    private long oldConf;
+
+    public void loadKalmanFilter() {
+        constant = loadFile(CONSTANT_FILE_PATH);
+        kalmanFilter.updateConstant(constant.P, constant.Q, constant.a, constant.H);
+    }
+
+    private Kalman_Filter_Constant loadFile(String path) {
+        Kalman_Filter_Constant constant = new Kalman_Filter_Constant();
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(CONSTANT_FILE_PATH));
+            String line = br.readLine();
+            constant.P = Double.parseDouble(line);
+            line = br.readLine();
+            constant.Q = Double.parseDouble(line);
+            line = br.readLine();
+            constant.a = Double.parseDouble(line);
+            line = br.readLine();
+            constant.H = Double.parseDouble(line);
+            br.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return constant;
+    }
+
+    // Update alpha and conf
+    public void newUpdateConf(long oldPerf){
+        double tmp;
+        long nextConf;
+        if (overshootable){
+            //if allow overshoot
+            tmp = Math.floor(conf + (1-pole)*(goal - currentPerf)/alpha);
+        } else {
+            if (currentPerf >= virtualgoal){
+                tmp = Math.floor(conf + (virtualgoal - currentPerf)/alpha);
+            } else {
+                tmp = Math.floor(conf + (1-pole)*(virtualgoal - currentPerf)/alpha);
+            }
+        }
+        System.out.println("Controller:Constant = " + constant.P + " " + constant.Q + " " + constant.a + " " + constant.H);
+        System.out.println("Controller:Before change alpha = " + alpha);
+        System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
+        System.out.println("ChangeAlpha : " + oldPerf + " " + currentPerf + " " + oldConf + " " + conf);
+        double newAlpha = changeAlpha(oldPerf, currentPerf, oldConf, conf);
+        if (newAlpha > 0) {
+            alpha = newAlpha;
+        }
+        System.out.println("Controller:After change alpha = " + alpha);
+        System.out.println("Controller:AFter change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
+        if (directControlable){
+            nextConf = (long) tmp;
+        } else {
+            nextConf = transducer((long)tmp);
+        }
+        // There is a minimum configuration for my case
+        if (nextConf < 0) {
+            conf = 0;
+        } else {
+            conf = nextConf;
+        }
+    }
+
+    private synchronized double changeAlpha(double old_exception, double current_exception, long old_minspacestart, long current_minspacestart) {
+        double alpha = 0;
+        if(old_exception == current_exception) {
+            alpha = -1;
+        } else {
+            if (old_minspacestart == current_minspacestart) {
+                alpha = -1;
+            } else {
+                double temp = (double)(current_exception - old_exception)/(double)(current_minspacestart-old_minspacestart);
+                System.out.println("Before checking -- TEMP : " + temp);
+                if (temp >= 0) {
+                    temp = 0;
+                }
+                System.out.println("After checking -- TEMP : " + temp);
+                alpha = kalmanFilter.predict(temp);
+                System.out.println("Kalman filter output : " + alpha);
+            }
+        }
+        return alpha;
+    }
 }

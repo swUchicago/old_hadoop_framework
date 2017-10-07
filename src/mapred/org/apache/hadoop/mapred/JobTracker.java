@@ -98,6 +98,8 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
   public static long jobStartTime = 0;
 
 
+  public static int oldPerf = 0;
+
   private static SmartConf smartConf;
 
   public static SmartConf getSmartConf() {

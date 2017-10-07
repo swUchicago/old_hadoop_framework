@@ -488,14 +488,20 @@ class TaskInProgress {
     Sensor sensor = Sensor.getInstance();
     SmartConf smartConf = JobTracker.getSmartConf();
 
+
     if (taskState == TaskStatus.State.FAILED) {
 
       // Sensor catches exceptions and intermediate file size
       sensor.catchExceptions(taskid.getTaskID());
 
       sensor.countMaxException();
-      smartConf.updatePerf(sensor.getCurrentMaxExceptions());
-      smartConf.updateConf();
+
+      int perf = sensor.getCurrentMaxExceptions();
+      smartConf.loadKalmanFilter();
+      smartConf.updatePerf(perf);
+//    smartConf.updateConf();
+      smartConf.newUpdateConf(JobTracker.oldPerf);
+      JobTracker.oldPerf = perf;
 
       System.out.println(sensor.getCurrentMaxExceptions());
       numTaskFailures++;

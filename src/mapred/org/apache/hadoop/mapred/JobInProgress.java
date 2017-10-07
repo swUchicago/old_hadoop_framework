@@ -1325,10 +1325,14 @@ class JobInProgress {
     sensor.countMaxException();
 
     SmartConf smartConf = JobTracker.getSmartConf();
-    smartConf.updatePerf(sensor.getCurrentMaxExceptions());
-    smartConf.updateConf();
+    int perf = sensor.getCurrentMaxExceptions();
+    smartConf.loadKalmanFilter();
+    smartConf.updatePerf(perf);
+//    smartConf.updateConf();
+    smartConf.newUpdateConf(JobTracker.oldPerf);
+    JobTracker.oldPerf = perf;
 
-    System.out.println(sensor.getCurrentMaxExceptions());
+//    System.out.println(sensor.getCurrentMaxExceptions());
     LOG.info("Task '" + taskid + "' has completed " + tip.getTIPId() + 
              " successfully.");          
 

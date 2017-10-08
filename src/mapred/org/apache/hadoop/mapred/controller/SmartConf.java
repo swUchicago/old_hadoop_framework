@@ -186,10 +186,13 @@ public class SmartConf {
 
     private Kalman_Filter_Constant loadFile(String path) {
         Kalman_Filter_Constant constant = new Kalman_Filter_Constant();
+        System.out.println("Check-1");
         try {
             BufferedReader br = new BufferedReader(new FileReader(CONSTANT_FILE_PATH));
+            System.out.println("Check-2");
             String line = br.readLine();
             constant.P = Double.parseDouble(line);
+            System.out.println("P = " + constant.P);
             line = br.readLine();
             constant.Q = Double.parseDouble(line);
             line = br.readLine();

@@ -656,6 +656,9 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
     double[] stdevPerf = {0.770455235, 1.127247638, 0.7828270956, 0.9282958599, 0.9793481541, 0.4991257206, 1.107597954, 0.634581439, 0.7537965611};
     smartConf.profile(performances, configurations, meanPerf, stdevPerf);
 
+    // read the kalman filter constant
+    smartConf.loadKalmanFilter();
+
     //
     // Grab some static constants
     //

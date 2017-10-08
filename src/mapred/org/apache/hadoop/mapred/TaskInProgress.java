@@ -497,7 +497,6 @@ class TaskInProgress {
       sensor.countMaxException();
 
       int perf = sensor.getCurrentMaxExceptions();
-      smartConf.loadKalmanFilter();
       smartConf.updatePerf(perf);
 //    smartConf.updateConf();
       smartConf.newUpdateConf(JobTracker.oldPerf);

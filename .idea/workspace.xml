@@ -13,23 +13,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TaskTracker.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TaskTracker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4695">
-              <caret line="416" column="38" lean-forward="false" selection-start-line="416" selection-start-column="38" selection-end-line="416" selection-end-column="38" />
+            <state relative-caret-position="215">
+              <caret line="1043" column="43" lean-forward="false" selection-start-line="1043" selection-start-column="2" selection-end-line="1043" selection-end-column="43" />
               <folding>
-                <marker date="1502353066000" expanded="true" signature="37975:38031" ph="..." />
+                <marker date="1507549838880" expanded="true" signature="37973:38029" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmartConf.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SmartConf.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/SmartConf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="258" column="12" lean-forward="true" selection-start-line="258" selection-start-column="12" selection-end-line="258" selection-end-column="12" />
+            <state relative-caret-position="659">
+              <caret line="248" column="23" lean-forward="true" selection-start-line="248" selection-start-column="23" selection-end-line="248" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,7 +141,6 @@
       <find>Job</find>
       <find>Job failed</find>
       <find>system.out.</find>
-      <find>minspacestart</find>
       <find>system.out.println</find>
       <find>controller</find>
       <find>sensor</find>
@@ -158,8 +157,9 @@
       <find>Configuration.ja</find>
       <find>Configuration.jav</find>
       <find>Configuration.java</find>
-      <find>SmartConf</find>
       <find>Sensor</find>
+      <find>SmartConf</find>
+      <find>minspacestart</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/mapred</dir>
@@ -179,12 +179,12 @@
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/InterTrackerProtocol.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Sensor.java" />
-        <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java" />
         <option value="$PROJECT_DIR$/src/core/org/apache/hadoop/conf/Configuration.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobInProgress.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskInProgress.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobTracker.java" />
         <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/SmartConf.java" />
+        <option value="$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java" />
       </list>
     </option>
   </component>
@@ -706,12 +706,12 @@
       <workItem from="1503396960067" duration="3000" />
       <workItem from="1505479788985" duration="4379000" />
       <workItem from="1507308764089" duration="2465000" />
-      <workItem from="1507379913639" duration="6342000" />
+      <workItem from="1507379913639" duration="6639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47412000" />
+    <option name="totallyTimeSpent" value="47709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="0" />
@@ -814,7 +814,7 @@
         <state relative-caret-position="15975">
           <caret line="1065" column="6" lean-forward="true" selection-start-line="1065" selection-start-column="6" selection-end-line="1065" selection-end-column="6" />
           <folding>
-            <marker date="1502353066000" expanded="true" signature="37975:38031" ph="..." />
+            <marker date="1507549838880" expanded="true" signature="37973:38029" ph="..." />
           </folding>
         </state>
       </provider>
@@ -911,7 +911,7 @@
         <state relative-caret-position="15645">
           <caret line="1043" column="0" lean-forward="false" selection-start-line="1043" selection-start-column="0" selection-end-line="1043" selection-end-column="41" />
           <folding>
-            <marker date="1502353066000" expanded="true" signature="37975:38031" ph="..." />
+            <marker date="1507549838880" expanded="true" signature="37973:38029" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1016,7 +1016,7 @@
         <state relative-caret-position="15735">
           <caret line="1049" column="24" lean-forward="true" selection-start-line="1049" selection-start-column="24" selection-end-line="1049" selection-end-column="24" />
           <folding>
-            <marker date="1502353066000" expanded="true" signature="37975:38031" ph="..." />
+            <marker date="1507549838880" expanded="true" signature="37973:38029" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1081,7 +1081,7 @@
         <state relative-caret-position="16005">
           <caret line="1067" column="56" lean-forward="false" selection-start-line="1067" selection-start-column="56" selection-end-line="1067" selection-end-column="56" />
           <folding>
-            <marker date="1502353066000" expanded="true" signature="37975:38031" ph="..." />
+            <marker date="1507549838880" expanded="true" signature="37973:38029" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1156,16 +1156,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4695">
-          <caret line="416" column="38" lean-forward="false" selection-start-line="416" selection-start-column="38" selection-end-line="416" selection-end-column="38" />
-          <folding>
-            <marker date="1502353066000" expanded="true" signature="37975:38031" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/LinearRegression.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1203,32 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/KalmanFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="660" column="0" lean-forward="true" selection-start-line="660" selection-start-column="0" selection-end-line="660" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="38" column="93" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobInProgress.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1408">
@@ -1254,10 +1218,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/SmartConf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="258" column="12" lean-forward="true" selection-start-line="258" selection-start-column="12" selection-end-line="258" selection-end-column="12" />
+        <state relative-caret-position="659">
+          <caret line="248" column="23" lean-forward="true" selection-start-line="248" selection-start-column="23" selection-end-line="248" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="38" column="93" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/KalmanFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="54" column="31" lean-forward="false" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="660" column="0" lean-forward="true" selection-start-line="660" selection-start-column="0" selection-end-line="660" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/TaskTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="1043" column="43" lean-forward="false" selection-start-line="1043" selection-start-column="2" selection-end-line="1043" selection-end-column="43" />
+          <folding>
+            <marker date="1507549838880" expanded="true" signature="37973:38029" ph="..." />
           </folding>
         </state>
       </provider>

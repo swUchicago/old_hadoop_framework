@@ -225,7 +225,7 @@ public class SmartConf {
 //        System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
 //        System.out.println("ChangeAlpha : " + oldPerf + " " + currentPerf + " " + oldConf + " " + conf);
         double newAlpha = changeAlpha(oldPerf, currentPerf, oldConf, conf);
-        if (newAlpha < 0) {
+        if (newAlpha < 0 && newAlpha != -1) {
             alpha = newAlpha;
         }
 //        System.out.println("Controller:After change alpha = " + alpha);

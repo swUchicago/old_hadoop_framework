@@ -28,8 +28,8 @@
       <file leaf-file-name="SmartConf.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/SmartConf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="260" column="13" lean-forward="true" selection-start-line="260" selection-start-column="13" selection-end-line="260" selection-end-column="13" />
+            <state relative-caret-position="771">
+              <caret line="258" column="12" lean-forward="true" selection-start-line="258" selection-start-column="12" selection-end-line="258" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -706,12 +706,12 @@
       <workItem from="1503396960067" duration="3000" />
       <workItem from="1505479788985" duration="4379000" />
       <workItem from="1507308764089" duration="2465000" />
-      <workItem from="1507379913639" duration="5938000" />
+      <workItem from="1507379913639" duration="6342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47008000" />
+    <option name="totallyTimeSpent" value="47412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="0" />
@@ -1254,8 +1254,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/SmartConf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="260" column="13" lean-forward="true" selection-start-line="260" selection-start-column="13" selection-end-line="260" selection-end-column="13" />
+        <state relative-caret-position="771">
+          <caret line="258" column="12" lean-forward="true" selection-start-line="258" selection-start-column="12" selection-end-line="258" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

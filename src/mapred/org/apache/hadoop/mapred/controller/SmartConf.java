@@ -220,16 +220,16 @@ public class SmartConf {
                 tmp = Math.floor(conf + (1-pole)*(virtualgoal - currentPerf)/alpha);
             }
         }
-        System.out.println("Controller:Constant = " + constant.P + " " + constant.Q + " " + constant.a + " " + constant.H);
-        System.out.println("Controller:Before change alpha = " + alpha);
-        System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
-        System.out.println("ChangeAlpha : " + oldPerf + " " + currentPerf + " " + oldConf + " " + conf);
+//        System.out.println("Controller:Constant = " + constant.P + " " + constant.Q + " " + constant.a + " " + constant.H);
+//        System.out.println("Controller:Before change alpha = " + alpha);
+//        System.out.println("Controller:Before change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
+//        System.out.println("ChangeAlpha : " + oldPerf + " " + currentPerf + " " + oldConf + " " + conf);
         double newAlpha = changeAlpha(oldPerf, currentPerf, oldConf, conf);
-        if (newAlpha > 0) {
+        if (newAlpha < 0) {
             alpha = newAlpha;
         }
-        System.out.println("Controller:After change alpha = " + alpha);
-        System.out.println("Controller:AFter change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
+//        System.out.println("Controller:After change alpha = " + alpha);
+//        System.out.println("Controller:AFter change 1/alpha = " + (double)1/(double)alpha/(double)1000000);
         if (directControlable){
             nextConf = (long) tmp;
         } else {
@@ -251,12 +251,11 @@ public class SmartConf {
             if (old_minspacestart == current_minspacestart) {
                 alpha = -1;
             } else {
+                System.out.println("Old alpha : " + this.alpha);
                 double temp = (double)(current_exception - old_exception)/(double)(current_minspacestart-old_minspacestart);
-                System.out.println("Before checking -- TEMP : " + temp);
                 if (temp >= 0) {
                     temp = 0;
                 }
-                System.out.println("After checking -- TEMP : " + temp);
                 alpha = kalmanFilter.predict(temp);
                 System.out.println("Kalman filter output : " + alpha);
             }

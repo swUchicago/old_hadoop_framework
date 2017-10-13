@@ -498,8 +498,8 @@ class TaskInProgress {
 
       int perf = sensor.getCurrentMaxExceptions();
       smartConf.updatePerf(perf);
-//    smartConf.updateConf();
-      smartConf.newUpdateConf(JobTracker.oldPerf);
+      smartConf.updateConf();
+//      smartConf.newUpdateConf(JobTracker.oldPerf);
       JobTracker.oldPerf = perf;
 
       System.out.println(sensor.getCurrentMaxExceptions());

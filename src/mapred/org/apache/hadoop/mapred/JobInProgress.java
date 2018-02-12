@@ -1324,12 +1324,12 @@ class JobInProgress {
     sensor.deleteExceptions(taskid.getTaskID());
     sensor.countMaxException();
 
-    SmartConf smartConf = JobTracker.getSmartConf();
-    int perf = sensor.getCurrentMaxExceptions();
-    smartConf.updatePerf(perf);
-    smartConf.updateConf();
-//    smartConf.newUpdateConf(JobTracker.oldPerf);
-    JobTracker.oldPerf = perf;
+//    SmartConf smartConf = JobTracker.getSmartConf();
+//    int perf = sensor.getCurrentMaxExceptions();
+//    smartConf.updatePerf(perf);
+//    smartConf.updateConf();
+////    smartConf.newUpdateConf(JobTracker.oldPerf);
+//    JobTracker.oldPerf = perf;
 
     System.out.println(sensor.getCurrentMaxExceptions());
     LOG.info("Task '" + taskid + "' has completed " + tip.getTIPId() + 

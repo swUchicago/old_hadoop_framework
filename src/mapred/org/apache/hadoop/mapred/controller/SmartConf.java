@@ -31,7 +31,7 @@ public class SmartConf {
     public SmartConf(long defaultConf, double goal, boolean overshootable, boolean directControlable){
         this.conf = defaultConf;
         this.goal = goal;
-        this.overshootable = overshootable ;
+        this.overshootable = overshootable;
         this.directControlable = directControlable;
     }
 

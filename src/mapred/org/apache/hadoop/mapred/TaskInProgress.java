@@ -503,6 +503,8 @@ class TaskInProgress {
 //      JobTracker.oldPerf = perf;
 
       System.out.println(sensor.getCurrentMaxExceptions());
+      SmartConf.exceptions.add(sensor.getCurrentMaxExceptions());
+
       numTaskFailures++;
       machinesWhereFailed.add(trackerHostName);
     } else {

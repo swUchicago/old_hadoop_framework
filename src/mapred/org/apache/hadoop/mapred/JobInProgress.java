@@ -17,8 +17,7 @@
  */
 package org.apache.hadoop.mapred;
 
-import java.io.DataInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.IdentityHashMap;
@@ -1332,6 +1331,8 @@ class JobInProgress {
 //    JobTracker.oldPerf = perf;
 
     System.out.println(sensor.getCurrentMaxExceptions());
+    SmartConf.exceptions.add(sensor.getCurrentMaxExceptions());
+
     LOG.info("Task '" + taskid + "' has completed " + tip.getTIPId() + 
              " successfully.");          
 
@@ -1425,6 +1426,96 @@ class JobInProgress {
                                      this.finishedMapTasks, 
                                      this.finishedReduceTasks, failedMapTasks, 
                                      failedReduceTasks, getCounters());
+
+      // Count mean, var, std, cov
+      ArrayList<double[]> profilling = new ArrayList<>();
+
+      String fileName = "/home/cc/profilling.txt";
+      String line = null;
+      try {
+        // FileReader reads text files in the default encoding.
+        FileReader fileReader =
+                new FileReader(fileName);
+
+        // Always wrap FileReader in BufferedReader.
+        BufferedReader bufferedReader =
+                new BufferedReader(fileReader);
+
+        while((line = bufferedReader.readLine()) != null) {
+          double temp[] = new double [4];
+          String[] splitted = line.split("\\s+");
+          for (int i=0; i<4; i++) {
+            temp[i] = Double.parseDouble(splitted[i]);
+          }
+          profilling.add(temp);
+        }
+        // Always close files.
+        bufferedReader.close();
+      }
+      catch(FileNotFoundException ex) {
+        System.out.println(
+                "Unable to open file '" +
+                        fileName + "'");
+      }
+      catch(IOException ex) {
+        System.out.println(
+                "Error reading file '"
+                        + fileName + "'");
+      }
+
+      ArrayList<Integer> exceptions = SmartConf.exceptions;
+      double mean = 0;
+      for (int i=0; i<exceptions.size(); i++) {
+        mean = mean + exceptions.get(i);
+      }
+      mean = mean / (double) exceptions.size();
+
+      double variance = 0;
+      for (int i=0; i<exceptions.size(); i++) {
+        double temp = exceptions.get(i) - mean;
+        variance = variance + (temp * temp);
+      }
+      variance = variance / (double) exceptions.size();
+
+      double std = Math.sqrt(variance);
+      double cov = std/mean;
+
+      double temp[] = new double[4];
+      temp[0] = mean;
+      temp[1] = variance;
+      temp[2] = std;
+      temp[3] = cov;
+
+      profilling.add(temp);
+
+      try {
+        // Assume default encoding.
+        FileWriter fileWriter =
+                new FileWriter(fileName);
+
+        // Always wrap FileWriter in BufferedWriter.
+        BufferedWriter bufferedWriter =
+                new BufferedWriter(fileWriter);
+
+        // Note that write() does not automatically
+        // append a newline character.
+
+        for (int i=0; i<profilling.size(); i++) {
+          double profile[] = profilling.get(i);
+          bufferedWriter.write(profile[0] + "\t" + profile[1] + "\t" + profile[2] + "\t" + profile[3]);
+          bufferedWriter.newLine();
+        }
+        // Always close files.
+        bufferedWriter.close();
+      }
+      catch(IOException ex) {
+        System.out.println(
+                "Error writing to file '"
+                        + fileName + "'");
+        // Or we could just do this:
+        // ex.printStackTrace();
+      }
+
       metrics.completeJob();
       return true;
     }

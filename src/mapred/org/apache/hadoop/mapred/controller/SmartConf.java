@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by williamsentosa on 8/5/17.
@@ -19,6 +20,9 @@ public class SmartConf {
     private double alpha;
     private double lambda;
     private double currentPerf;
+
+    // List of exceptions for profiling
+    public static ArrayList<Integer> exceptions = new ArrayList<>();
 
     /**
      * Constructor

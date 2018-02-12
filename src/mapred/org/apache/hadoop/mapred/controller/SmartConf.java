@@ -22,7 +22,7 @@ public class SmartConf {
     private double currentPerf;
 
     // List of exceptions for profiling
-    public static ArrayList<Integer> exceptions = new ArrayList<>();
+    public static ArrayList<Integer> exceptions = new ArrayList<Integer>();
 
     /**
      * Constructor

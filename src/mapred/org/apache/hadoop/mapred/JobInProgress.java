@@ -1428,7 +1428,7 @@ class JobInProgress {
                                      failedReduceTasks, getCounters());
 
       // Count mean, var, std, cov
-      ArrayList<double[]> profilling = new ArrayList<>();
+      ArrayList<double[]> profilling = new ArrayList<double[]>();
 
       String fileName = "/home/cc/profilling.txt";
       String line = null;

@@ -298,6 +298,9 @@ class JobInProgress {
       return;
     }
 
+    // initialize exceptions
+    SmartConf.exceptions = new ArrayList<Integer>();
+
     //
     // read input splits and create a map per a split
     //
@@ -1464,6 +1467,7 @@ class JobInProgress {
       }
 
       ArrayList<Integer> exceptions = SmartConf.exceptions;
+      System.out.println("Exception size : " + exceptions.size());
       double mean = 0;
       for (int i=0; i<exceptions.size(); i++) {
         mean = mean + exceptions.get(i);

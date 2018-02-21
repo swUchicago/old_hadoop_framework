@@ -103,19 +103,19 @@ public class SmartConf {
      * @param stdevPerf
      */
     public void profile(double[] performances, double[] configs, double[] meanPerf, double[] stdevPerf) {
-//        System.out.println("** Profilling **");
+        System.out.println("** Profilling **");
         double delta;
         LinearRegression regression = new LinearRegression(configs, performances);
         alpha = regression.slope();
-//        System.out.println("Alpha : " + alpha);
+        System.out.println("Alpha : " + alpha);
         delta = countDelta(meanPerf, stdevPerf);
         pole = 1 - 2 / delta;
-//        System.out.println("Delta : " + delta);
-//        System.out.println("Pole : " + pole);
+        System.out.println("Delta : " + delta);
+        System.out.println("Pole : " + pole);
         lambda = countLambda(meanPerf, stdevPerf);
-//        System.out.println("Lambda : " + lambda);
+        System.out.println("Lambda : " + lambda);
         virtualgoal = Math.round((1 - lambda) * goal);
-//        System.out.println("Virtual goal : " + virtualgoal);
+        System.out.println("Virtual goal : " + virtualgoal);
     }
 
     /**

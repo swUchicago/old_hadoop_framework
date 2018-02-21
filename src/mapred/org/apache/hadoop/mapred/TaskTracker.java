@@ -1051,7 +1051,7 @@ public class TaskTracker
       checkLocalDirs(fConf.getLocalDirs());
       askForNewTask = enoughFreeSpace(localMinSpaceStart);
       if (jobClient.getIsJobSubmitted()) {
-        System.out.println(askForNewTask);
+//        System.out.println(askForNewTask);
       }
     }
 
@@ -1291,7 +1291,7 @@ public class TaskTracker
         df = new DF(new File(localDirs[i]), fConf);
         localDirsDf.put(localDirs[i], df);
       }
-      System.out.println("storage : " + df.getAvailable()/1000000);
+//      System.out.println("storage : " + df.getAvailable()/1000000);
       if (df.getAvailable() > minSpace)
         return true;
     }

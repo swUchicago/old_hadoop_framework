@@ -127,7 +127,9 @@ public class SmartConf {
     private double countDelta(double[] mean, double[] std) {
         double delta = 0;
         for(int i=0; i<mean.length; i++) {
-            delta = delta + (std[i]/mean[i]);
+            if (mean[i] != 0) {
+                delta = delta + (std[i]/mean[i]);
+            }
         }
         delta = 1 + ((3 / (double) mean.length) * delta);
         return delta;

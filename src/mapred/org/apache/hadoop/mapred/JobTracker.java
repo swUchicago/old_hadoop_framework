@@ -682,13 +682,9 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
       while((line = bufferedReader.readLine()) != null) {
         String[] splitted = line.split("\\t");
         configurations.add(Double.parseDouble(splitted[0]));
-        System.out.println("Conf: " + Double.parseDouble(splitted[0]));
         performances.add(Double.parseDouble(splitted[1]));
-        System.out.println("Perf: " + Double.parseDouble(splitted[1]));
         meanPerf.add(Double.parseDouble(splitted[2]));
-        System.out.println("Mean: " + Double.parseDouble(splitted[2]));
         stdevPerf.add(Double.parseDouble(splitted[3]));
-        System.out.println("Stdev: " + Double.parseDouble(splitted[3]));
       }
       // Always close files.
       bufferedReader.close();

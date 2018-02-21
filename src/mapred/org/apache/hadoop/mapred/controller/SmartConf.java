@@ -144,7 +144,9 @@ public class SmartConf {
     private double countLambda(double[] mean, double[] std) {
         double lambda = 0;
         for(int i=0; i<mean.length; i++) {
-            lambda = lambda + (std[i]/mean[i]);
+            if (mean[i] != 0) {
+                lambda = lambda + (std[i]/mean[i]);
+            }
         }
         lambda = (1 / (double) mean.length) * lambda;
         return lambda;

@@ -81,8 +81,8 @@
       <file leaf-file-name="JobTracker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobTracker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="693" column="29" lean-forward="true" selection-start-line="693" selection-start-column="29" selection-end-line="693" selection-end-column="29" />
+            <state relative-caret-position="297">
+              <caret line="690" column="71" lean-forward="false" selection-start-line="690" selection-start-column="71" selection-end-line="690" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -771,12 +771,12 @@
       <workItem from="1518149203770" duration="1007000" />
       <workItem from="1518412716654" duration="7722000" />
       <workItem from="1519019834935" duration="8433000" />
-      <workItem from="1519199916481" duration="1969000" />
+      <workItem from="1519199916481" duration="2023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72008000" />
+    <option name="totallyTimeSpent" value="72062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="728" extended-state="6" />
@@ -1332,8 +1332,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/JobTracker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="693" column="29" lean-forward="true" selection-start-line="693" selection-start-column="29" selection-end-line="693" selection-end-column="29" />
+        <state relative-caret-position="297">
+          <caret line="690" column="71" lean-forward="false" selection-start-line="690" selection-start-column="71" selection-end-line="690" selection-end-column="71" />
           <folding />
         </state>
       </provider>

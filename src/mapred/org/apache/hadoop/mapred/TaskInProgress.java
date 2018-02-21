@@ -32,6 +32,7 @@ import org.apache.hadoop.mapred.controller.Controller;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.mapred.JobClient.RawSplit;
+import org.apache.hadoop.mapred.controller.LinearRegression;
 import org.apache.hadoop.mapred.controller.Sensor;
 import org.apache.hadoop.mapred.controller.SmartConf;
 import org.apache.hadoop.net.Node;
@@ -492,18 +493,58 @@ class TaskInProgress {
     if (taskState == TaskStatus.State.FAILED) {
 
       // Sensor catches exceptions and intermediate file size
+      int lastPerformance = sensor.getCurrentMaxExceptions();
+      long lastConf = smartConf.getConf();
       sensor.catchExceptions(taskid.getTaskID());
-
       sensor.countMaxException();
 
-//      int perf = sensor.getCurrentMaxExceptions();
-//      smartConf.updatePerf(perf);
-//      smartConf.updateConf();
-////      smartConf.newUpdateConf(JobTracker.oldPerf);
-//      JobTracker.oldPerf = perf;
+      // Put to temp for calculating online alpha
+      JobTracker.tempConfigs.add((double) smartConf.getConf());
+      JobTracker.tempPerformances.add((double) sensor.getCurrentMaxExceptions());
+      if (JobTracker.tempConfigs.size() >= JobTracker.batchAlpha) {
+        LinearRegression regression = new LinearRegression(convertToDoubleArray(JobTracker.tempConfigs), convertToDoubleArray(JobTracker.tempPerformances));
+        JobTracker.onlineAplha = regression.slope();
+        JobTracker.tempConfigs = new ArrayList<Double>();
+        JobTracker.tempPerformances = new ArrayList<Double>();
+      }
 
-      System.out.println(sensor.getCurrentMaxExceptions());
+
+      int perf = sensor.getCurrentMaxExceptions();
+      smartConf.updatePerf(perf);
+      smartConf.updateConf();
+//      smartConf.newUpdateConf(JobTracker.oldPerf);
+
+//      System.out.println(sensor.getCurrentMaxExceptions());
       SmartConf.exceptions.add(sensor.getCurrentMaxExceptions());
+
+      // Calculate estimation error
+      double expectedPerformance = lastPerformance + smartConf.getAlpha() * (smartConf.getConf() - lastConf);
+      double performanceError = Math.abs(sensor.getCurrentMaxExceptions() - expectedPerformance);
+
+      int sign = 0;
+      if (isSignSame(expectedPerformance - JobTracker.lastExpectedPerformance, perf - lastPerformance)) {
+        sign = 0;
+      } else {
+        sign = 1;
+      }
+
+      JobTracker.signs.add(sign);
+
+      if (JobTracker.signs.size() >= JobTracker.batchSign) {
+        double mean = 0;
+        for (int i=0; i<JobTracker.signs.size(); i++) {
+          mean += JobTracker.signs.get(i);
+        }
+        mean = mean / (double) JobTracker.signs.size();
+        JobTracker.onlineAplha = mean;
+        JobTracker.signs = new ArrayList<Integer>();
+      }
+
+      JobTracker.lastExpectedPerformance = expectedPerformance;
+
+      System.out.println(JobTracker.jobStartTime + "\t" + System.currentTimeMillis() + "\t" + performanceError + "\t" + JobTracker.onlineAplha + "\t" + JobTracker.sign);
+
+
 
       numTaskFailures++;
       machinesWhereFailed.add(trackerHostName);
@@ -516,6 +557,19 @@ class TaskInProgress {
       kill();
     }
   }
+
+  private double[] convertToDoubleArray(ArrayList<Double> list) {
+    double[] temp = new double[list.size()];
+    for (int i=0; i<list.size(); i++) {
+      temp[i] = list.get(i);
+    }
+    return temp;
+  }
+
+  private boolean isSignSame(double a, double b) {
+    return (a > 0 && b > 0) || (a < 0 && b <0) || (a == 0 && b == 0);
+  }
+
 
   /**
    * Finalize the <b>completed</b> task; note that this might not be the first 

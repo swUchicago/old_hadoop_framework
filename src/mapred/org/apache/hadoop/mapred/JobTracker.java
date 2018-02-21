@@ -18,7 +18,11 @@
 package org.apache.hadoop.mapred;
 
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.BindException;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
@@ -93,12 +97,18 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
   private int numTaskCacheLevels; // the max level to which we cache tasks
   private Set<Node> nodesAtMaxLevel = new HashSet<Node>();
 
-  public static int mapParallelism = 1;
+  public static int mapParallelism = 2;
   public static boolean isJobSubmitted = false;
   public static long jobStartTime = 0;
 
-
-  public static int oldPerf = 0;
+  public static ArrayList<Double> tempConfigs = new ArrayList<Double>();
+  public static ArrayList<Double> tempPerformances = new ArrayList<Double>();
+  public static ArrayList<Integer> signs = new ArrayList<Integer>();
+  public static final int batchAlpha = 30;
+  public static final int batchSign = 30;
+  public static double onlineAplha = 0;
+  public static int sign = 0;
+  public static double lastExpectedPerformance = 0;
 
   private static SmartConf smartConf;
 
@@ -645,16 +655,53 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
 
     // Initialize a SmartConf instance
     long defaultConf = 0;
-    long goal = 3;
+    long goal = 8;
     boolean overshootable = false;
     boolean directControllable = true;
     smartConf = new SmartConf(defaultConf, goal, overshootable, directControllable);
+
     // Setup and do profilling
-    double[] performances = {0.8870967742, 2.032258065, 1.117647059, 1.582278481, 1.381578947, 0.5740740741, 1.615384615, 0.5090909091, 0.9436619718};
-    double[] configurations = {188743680, 0, 73400320, 20971520, 125829120, 251658240, 52428800, 314572800, 157286400};
-    double[] meanPerf = {0.8870967742, 2.032258065, 1.117647059, 1.582278481, 1.381578947, 0.5740740741, 1.615384615, 0.5090909091, 0.9436619718};
-    double[] stdevPerf = {0.770455235, 1.127247638, 0.7828270956, 0.9282958599, 0.9793481541, 0.4991257206, 1.107597954, 0.634581439, 0.7537965611};
-    smartConf.profile(performances, configurations, meanPerf, stdevPerf);
+    ArrayList<Double> performances = new ArrayList<Double>();
+    ArrayList<Double> configurations = new ArrayList<Double>();
+    ArrayList<Double> meanPerf = new ArrayList<Double>();
+    ArrayList<Double> stdevPerf = new ArrayList<Double>();
+
+
+
+    String fileName = "/home/cc/old_hadoop_framework/profile.txt";
+    String line = null;
+    try {
+      // FileReader reads text files in the default encoding.
+      FileReader fileReader =
+              new FileReader(fileName);
+
+      // Always wrap FileReader in BufferedReader.
+      BufferedReader bufferedReader =
+              new BufferedReader(fileReader);
+
+      while((line = bufferedReader.readLine()) != null) {
+        String[] splitted = line.split("\\s+");
+        configurations.add(Double.parseDouble(splitted[0]));
+        performances.add(Double.parseDouble(splitted[1]));
+        meanPerf.add(Double.parseDouble(splitted[2]));
+        stdevPerf.add(Double.parseDouble(splitted[3]));
+      }
+      // Always close files.
+      bufferedReader.close();
+    }
+    catch(FileNotFoundException ex) {
+      System.out.println(
+              "Unable to open file '" +
+                      fileName + "'");
+    }
+    catch(IOException ex) {
+      System.out.println(
+              "Error reading file '"
+                      + fileName + "'");
+    }
+
+    int size = configurations.size();
+    smartConf.profile(convertToDoubleArray(performances), convertToDoubleArray(configurations), convertToDoubleArray(meanPerf), convertToDoubleArray(stdevPerf));
 
     // read the kalman filter constant
 //    smartConf.loadKalmanFilter();
@@ -787,6 +834,14 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
     completedJobStatusStore = new CompletedJobStatusStore(conf,fs);
 
     LOG.info("Starting RUNNING");
+  }
+
+  private double[] convertToDoubleArray(ArrayList<Double> list) {
+    double[] temp = new double[list.size()];
+    for (int i=0; i<list.size(); i++) {
+      temp[i] = list.get(i);
+    }
+    return temp;
   }
 
   public static InetSocketAddress getAddress(Configuration conf) {

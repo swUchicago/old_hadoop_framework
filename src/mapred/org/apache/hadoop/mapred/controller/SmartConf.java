@@ -167,6 +167,10 @@ public class SmartConf {
         this.alpha = alpha_;
     }
 
+    public double getAlpha() {
+        return this.alpha;
+    }
+
 
 //    // Adding Kalman Filter
 //

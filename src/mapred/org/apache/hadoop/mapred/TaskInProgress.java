@@ -492,9 +492,10 @@ class TaskInProgress {
 
     if (taskState == TaskStatus.State.FAILED) {
 
-      // Sensor catches exceptions and intermediate file size
       int lastPerformance = sensor.getCurrentMaxExceptions();
       long lastConf = smartConf.getConf();
+
+      // Sensor catches exceptions and intermediate file size
       sensor.catchExceptions(taskid.getTaskID());
       sensor.countMaxException();
 
@@ -542,7 +543,7 @@ class TaskInProgress {
 
       JobTracker.lastExpectedPerformance = expectedPerformance;
 
-      System.out.println(JobTracker.jobStartTime + "\t" + System.currentTimeMillis() + "\t" + performanceError + "\t" + JobTracker.onlineAplha + "\t" + JobTracker.sign);
+      System.out.println(JobTracker.jobStartTime + "\t" + System.currentTimeMillis() + "\t" + smartConf.getConf() + "\t" + perf + "\t" + expectedPerformance + "\t" + performanceError + "\t" + JobTracker.onlineAplha + "\t" + JobTracker.sign);
 
 
 

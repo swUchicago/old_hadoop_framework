@@ -522,6 +522,18 @@ class TaskInProgress {
       double expectedPerformance = lastPerformance + smartConf.getAlpha() * (smartConf.getConf() - lastConf);
       double performanceError = Math.abs(sensor.getCurrentMaxExceptions() - expectedPerformance);
 
+      JobTracker.estimationErrors.add(performanceError);
+      if (JobTracker.estimationErrors.size() >= JobTracker.batchError) {
+        double mean = 0;
+        for (int i=0; i<JobTracker.estimationErrors.size(); i++) {
+          mean += JobTracker.estimationErrors.get(i);
+        }
+        mean = mean / (double) JobTracker.estimationErrors.size();
+        JobTracker.estimationError = mean;
+        JobTracker.estimationErrors = new ArrayList<Double>();
+      }
+
+
       int sign = 0;
       if (isSignSame(expectedPerformance - JobTracker.lastExpectedPerformance, perf - lastPerformance)) {
         sign = 0;
@@ -543,7 +555,7 @@ class TaskInProgress {
 
       JobTracker.lastExpectedPerformance = expectedPerformance;
 
-      System.out.println(JobTracker.jobStartTime + "\t" + System.currentTimeMillis() + "\t" + smartConf.getConf() + "\t" + perf + "\t" + expectedPerformance + "\t" + performanceError + "\t" + JobTracker.onlineAplha + "\t" + JobTracker.sign);
+      System.out.println(JobTracker.jobStartTime + "\t" + System.currentTimeMillis() + "\t" + smartConf.getConf() + "\t" + perf + "\t" + expectedPerformance + "\t" + JobTracker.estimationError + "\t" + JobTracker.onlineAplha + "\t" + JobTracker.sign);
 
 
 

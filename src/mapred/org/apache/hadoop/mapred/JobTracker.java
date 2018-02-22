@@ -104,11 +104,14 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
   public static ArrayList<Double> tempConfigs = new ArrayList<Double>();
   public static ArrayList<Double> tempPerformances = new ArrayList<Double>();
   public static ArrayList<Integer> signs = new ArrayList<Integer>();
+  public static ArrayList<Double> estimationErrors = new ArrayList<Double>();
+  public static final int batchError = 30;
   public static final int batchAlpha = 30;
   public static final int batchSign = 30;
   public static double onlineAplha = 0;
   public static double sign = 0;
   public static double lastExpectedPerformance = 0;
+  public static double estimationError = 0;
 
   private static SmartConf smartConf;
 

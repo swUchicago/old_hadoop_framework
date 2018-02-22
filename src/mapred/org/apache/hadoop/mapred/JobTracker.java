@@ -107,7 +107,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
   public static final int batchAlpha = 30;
   public static final int batchSign = 30;
   public static double onlineAplha = 0;
-  public static int sign = 0;
+  public static double sign = 0;
   public static double lastExpectedPerformance = 0;
 
   private static SmartConf smartConf;

@@ -1367,7 +1367,7 @@ class JobInProgress {
         mean += JobTracker.signs.get(i);
       }
       mean = mean / (double) JobTracker.signs.size();
-      JobTracker.onlineAplha = mean;
+      JobTracker.sign = mean;
       JobTracker.signs = new ArrayList<Integer>();
     }
 

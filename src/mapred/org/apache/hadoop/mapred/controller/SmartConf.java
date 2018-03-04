@@ -172,7 +172,7 @@ public class SmartConf {
     }
 
     public double getAlpha() {
-        return this.alpha;
+        return -1 * this.alpha;
     }
 
 

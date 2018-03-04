@@ -107,6 +107,7 @@ public class SmartConf {
         double delta;
         LinearRegression regression = new LinearRegression(configs, performances);
         alpha = regression.slope();
+        alpha = alpha * -1;
         System.out.println("Alpha : " + alpha);
         delta = countDelta(meanPerf, stdevPerf);
         pole = 1 - 2 / delta;
@@ -172,7 +173,7 @@ public class SmartConf {
     }
 
     public double getAlpha() {
-        return -1 * this.alpha;
+        return this.alpha;
     }
 
 

@@ -1364,7 +1364,7 @@ class JobInProgress {
     }
 
     int sign = 0;
-    if (isSignSame(expectedPerformance - JobTracker.lastExpectedPerformance, perf - lastPerformance)) {
+    if (isSignSame(expectedPerformance - lastPerformance, perf - lastPerformance)) {
       sign = 0;
     } else {
       sign = 1;

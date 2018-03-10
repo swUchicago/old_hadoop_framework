@@ -81,11 +81,11 @@
       <file leaf-file-name="SmartConf.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/SmartConf.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="110" column="42" lean-forward="true" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+            <state relative-caret-position="323">
+              <caret line="109" column="29" lean-forward="false" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="29" />
               <folding>
-                <element signature="e#5382#5383#0" expanded="true" />
-                <element signature="e#5415#5416#0" expanded="true" />
+                <element signature="e#5384#5385#0" expanded="true" />
+                <element signature="e#5417#5418#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -262,7 +262,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>S</find>
       <find>Smart</find>
       <find>SmartCon</find>
       <find>m</find>
@@ -292,6 +291,7 @@
       <find>Sensor</find>
       <find>getAlpha</find>
       <find>minspacestart</find>
+      <find>alpha</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/mapred</dir>
@@ -852,12 +852,12 @@
       <workItem from="1518412716654" duration="7722000" />
       <workItem from="1519019834935" duration="8433000" />
       <workItem from="1519199916481" duration="9153000" />
-      <workItem from="1520132722899" duration="5593000" />
+      <workItem from="1520132722899" duration="6910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84785000" />
+    <option name="totallyTimeSpent" value="86102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="728" extended-state="6" />
@@ -1750,11 +1750,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mapred/org/apache/hadoop/mapred/controller/SmartConf.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="110" column="42" lean-forward="true" selection-start-line="110" selection-start-column="42" selection-end-line="110" selection-end-column="42" />
+        <state relative-caret-position="323">
+          <caret line="109" column="29" lean-forward="false" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="29" />
           <folding>
-            <element signature="e#5382#5383#0" expanded="true" />
-            <element signature="e#5415#5416#0" expanded="true" />
+            <element signature="e#5384#5385#0" expanded="true" />
+            <element signature="e#5417#5418#0" expanded="true" />
           </folding>
         </state>
       </provider>

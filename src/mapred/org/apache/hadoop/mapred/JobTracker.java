@@ -658,7 +658,7 @@ public class JobTracker implements MRConstants, InterTrackerProtocol, JobSubmiss
 
     // Initialize a SmartConf instance
     long defaultConf = 0;
-    long goal = 8;
+    long goal = 4;
     boolean overshootable = false;
     boolean directControllable = true;
     smartConf = new SmartConf(defaultConf, goal, overshootable, directControllable);

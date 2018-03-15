@@ -111,12 +111,13 @@ public class SmartConf {
         System.out.println("Alpha : " + alpha);
         delta = countDelta(meanPerf, stdevPerf);
         pole = 1 - 2 / delta;
+        pole = 0;
         System.out.println("Delta : " + delta);
         System.out.println("Pole : " + pole);
         lambda = countLambda(meanPerf, stdevPerf);
         System.out.println("Lambda : " + lambda);
         virtualgoal = Math.round((1 - lambda) * goal);
-        virtualgoal = 3;
+//        virtualgoal = 3;
         System.out.println("Virtual goal : " + virtualgoal);
     }
 

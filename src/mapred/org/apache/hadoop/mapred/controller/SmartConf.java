@@ -116,6 +116,7 @@ public class SmartConf {
         lambda = countLambda(meanPerf, stdevPerf);
         System.out.println("Lambda : " + lambda);
         virtualgoal = Math.round((1 - lambda) * goal);
+        virtualgoal = 0;
         System.out.println("Virtual goal : " + virtualgoal);
     }
 

@@ -111,7 +111,6 @@ public class SmartConf {
         System.out.println("Alpha : " + alpha);
         delta = countDelta(meanPerf, stdevPerf);
         pole = 1 - 2 / delta;
-        pole = 0.99;
         System.out.println("Delta : " + delta);
         System.out.println("Pole : " + pole);
         lambda = countLambda(meanPerf, stdevPerf);
